@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/chunck.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app" class="app">
+      <header class="the-header container app__header">
+        <picture class="the-header__bg-picture"
+          ><source
+            srcset="/img/4_xs.c030c4bf.jpg"
+            media="(max-width: 520px)"
+            style="object-position: center top" />
+          <source
+            srcset="/img/4_sm.656eeb42.jpg"
+            media="(max-width: 768px)"
+            style="object-position: center top" />
+          <source
+            srcset="/img/4_md.c942017a.jpg"
+            media="(max-width: 1024px)"
+            style="object-position: center top" />
+          <img
+            src="/img/4.af3a5b8a.jpg"
+            alt="header bg"
+            style="object-position: center top"
+        /></picture>
+        <div class="the-header__top">
+          <div class="the-header__top-content">
+            <div to="[object Object]" class="logo the-header__logo">
+              <img src="/img/logo.ec9d7849.svg" alt="Bygg logo" />
+            </div>
+            <!---->
+            <div class="the-header__btn-wrap _desc">
+              <button class="the-header__btn the-header__btn-menu">
+                <span class="the-header__btn-menu-ico"
+                  ><span></span><span></span><span></span
+                ></span></button
+              ><!---->
+            </div>
+            <button class="the-header__btn the-header__btn-menu _mob">
+              <span class="the-header__btn-menu-ico"
+                ><span></span><span></span><span></span
+              ></span>
+            </button>
+          </div>
+        </div>
+        <div class="the-header__middle container-inner">
+          <div class="the-header__middle-content">
+            <!---->
+            <h1 class="the-header__title">Ny offertförfrågan</h1>
+            <!----><!----><!---->
+          </div>
+        </div>
+        <!---->
+      </header>
+      <main class="app__main">
+        <div class="home-page container">
+          <div
+            id="main-first-block"
+            style="display: block"
+            class="home-page__content container-inner"
+          >
+            <div class="create-project home-page__create-page">
+              <div
+                class="create-project-categories create-project__step _categories"
+              >
+                <h2 class="create-project-categories__title">
+                  Vilken typ av expert söker du?
+                </h2>
+                <p class="create-project-categories__description">
+                  Vilken kategori passar bäst in på ditt projekt?
+                </p>
+                <div class="create-project-categories__list-wrap">
+                  <label
+                    class="base-input create-project-categories__search"
+                    placeholder="T.ex. snickare eller elektriker"
+                  >
+                    <input
+                      type="text"
+                      placeholder="T.ex. snickare eller elektriker"
+                      class="base-input__input"
+                    />
+                  </label>
+                  <div
+                    class="base-radio-buttons create-project-categories__list _vertical"
+                  >
+                    <div class="base-radio-buttons__list"></div>
+                  </div>
+                </div>
+
+                <div
+                  style="display: none"
+                  class="create-project-location__zip-input-wrap"
+                >
+                  <label
+                    class="base-input create-project-location__zip-input _shadow"
+                    autofocus="autofocus"
+                    ><span class="base-input__label"> Postnummer </span>
+                    <input
+                      id="postnummer"
+                      type="text"
+                      autofocus="autofocus"
+                      class="base-input__input"
+                    /><!----></label
+                  ><!---->
+                </div>
+              </div>
+              <!---->
+              <div class="create-project__footer">
+                <!-- <div
+                  class="create-project__footer-progress"
+                  style="width: 20%"
+                ></div> -->
+                <!----><button
+                  id="skicka-button"
+                  disabled="disabled"
+                  class="create-project__btn btn _accent"
+                >
+                  SKICKA FÖRFRÅGAN
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="display: none"
+            id="beskriv-section"
+            class="home-page__content container-inner"
+          >
+            <div class="create-project home-page__create-page">
+              <div
+                class="create-project-description create-project__step _description"
+              >
+                <h2 class="create-project-description__title">
+                  Beskriv projektet
+                </h2>
+                <p class="create-project-description__description">
+                  Beskriv ditt projekt så detaljerat som möjligt. Det gör det
+                  enklare för experten att bedöma om just ditt projekt är rätt
+                  för dem.
+                </p>
+                <label
+                  class="base-input create-project-description__input _shadow"
+                >
+                  <span class="base-input__label"> Projektets namn </span>
+                  <input
+                    type="text"
+                    id="projektets"
+                    class="base-input__input"
+                  />
+                </label>
+                <label
+                  class="base-input create-project-description__input _shadow"
+                  rows="10"
+                  placeholder="Beskriv det du vill ha hjälp med, ju mer utförligt du beskriver desto större chans är det att en expert svarar på din förfrågan."
+                >
+                  <span class="base-input__label"> Beskrivning </span>
+                  <textarea
+                    id="beskrivning"
+                    rows="10"
+                    placeholder="Beskriv det du vill ha hjälp med, ju mer utförligt du beskriver desto större chans är det att en expert svarar på din förfrågan."
+                    class="base-input__input"
+                  >
+                  </textarea>
+                </label>
+                <div class="create-project-description__row">
+                  <div
+                    id="onskat-select"
+                    class="base-select create-project-description__input _shadow _large"
+                  >
+                    <span class="base-input__label"> Önskat startdatum </span>
+
+                    <div class="base-select__select">
+                      <div class="base-select__container">
+                        <div
+                          id="base-select__value__onskat"
+                          class="base-select__value"
+                        ></div>
+                        <!----><!---->
+                        <div id="onskat-button" class="base-select__arrow">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="240"
+                            height="240"
+                            viewBox="0 0 24 24"
+                            style="fill: rgba(0, 0, 0, 1)"
+                          >
+                            <path
+                              d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        style="display: none"
+                        class="base-select__dropdown-wrap"
+                      >
+                        <div class="base-select__dropdown"></div>
+                      </div>
+                    </div>
+
+                    <!---->
+                  </div>
+                  <div
+                    id="Jag-ar-select"
+                    class="base-select create-project-description__input _shadow _large"
+                  >
+                    <span class="base-input__label"> Jag är... </span>
+
+                    <div class="base-select__select">
+                      <div class="base-select__container">
+                        <div
+                          id="base-select__value__jar"
+                          class="base-select__value"
+                        ></div>
+                        <!----><!---->
+                        <div id="Jag-ar-button" class="base-select__arrow">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="240"
+                            height="240"
+                            viewBox="0 0 24 24"
+                            style="fill: rgba(0, 0, 0, 1)"
+                          >
+                            <path
+                              d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        style="display: none"
+                        id="Jag-ar-select-item"
+                        class="base-select__dropdown-wrap"
+                      >
+                        <div
+                          id="Jag-ar-select-dropdown"
+                          class="base-select__dropdown"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <!---->
+                  </div>
+                </div>
+                <h3 class="create-project-description__section-title">
+                  Lägg till filer
+                </h3>
+                <p class="create-project-description__section-description">
+                  Ju tydligare, desto bättre – här kan du ladda upp före-bilder,
+                  ritningar och dokument som underlättar för experten.
+                </p>
+                <div
+                  class="files-drop-upload create-project-description__files _shadow"
+                >
+                  <label class="files-drop-upload__dropzone"
+                    ><div class="files-drop-upload__dropzone-content">
+                      <div class="files-drop-upload__dropzone-title">
+                        Släpp dina filer här
+                      </div>
+                      <div class="files-drop-upload__dropzone-separator">
+                        <span>eller</span>
+                      </div>
+                      <div class="files-drop-upload__dropzone-button btn">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          style="fill: rgba(255, 246, 246, 1)"
+                        >
+                          <path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4z"></path>
+                          <path
+                            d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+                          ></path>
+                        </svg>
+                        <span>Välj filer</span>
+                      </div>
+                      <div class="files-drop-upload__dropzone-note">
+                        Typ JPEG, JPG, PNG, GIF, PDF<br />
+                        Max 10 filer 10MB styck
+                      </div>
+                    </div>
+                    <input
+                      id="select-file"
+                      type="file"
+                      multiple="multiple"
+                      accept=".jpeg,.jpg,.png,.gif,.pdf,image/jpeg,image/jpg,image/png,image/gif,application/pdf"
+                  /></label>
+
+                  <div class="files-drop-upload__files"></div>
+                </div>
+              </div>
+              <!---->
+              <div class="create-project__footer">
+                <button
+                  id="skicka-button-last"
+                  disabled="disabled"
+                  class="create-project__btn btn _accent"
+                >
+                  SKICKA FÖRFRÅGAN
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="the-footer container app__footer">
+        <div class="the-footer__content container-inner">
+          <div to="[object Object]" class="logo the-footer__logo">
+            <img src="/img/logo-dark.0cc0e6da.svg" alt="Bygg logo" />
+          </div>
+          <div class="the-footer__text text">
+            <p>
+              BYGG.se är Sveriges största jämförelsesida för dig som står i
+              begrepp att bygga eller renovera hus. Vi är en samlingspunkt för
+              byggföretag, experter och husägare. Jämför omdömen, priser och
+              hustillverkare och lär dig mer genom vårt stora BYGGbibliotek med
+              steg för steg-artiklar, inspirerande reportage och informativa
+              artiklar om allt som rör bygg och renovering.
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!---->
+    </div>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>
+
+<!-- <div class="files-drop-upload__file">
+                      <div class="file-preview files-drop-upload__file-img">
+                        <img
+                          src="blob:https://offert.bygg.se/c1ffde5a-6910-4cfc-adbf-d71ca94e3bea"
+                          class="file-preview__file-img"
+                        />
+                        <div class="file-preview__btns">
+                          <a
+                            href="blob:https://offert.bygg.se/c1ffde5a-6910-4cfc-adbf-d71ca94e3bea"
+                            target="_blank"
+                            class="file-preview__btn _new-window"
+                          >
+                            <svg aria-hidden="true">
+                              <use href="#icon-new-window"></use>
+                            </svg>
+                          </a>
+                          <a
+                            href="blob:https://offert.bygg.se/c1ffde5a-6910-4cfc-adbf-d71ca94e3bea"
+                            download="s2.PNG"
+                            class="file-preview__btn _download"
+                          >
+                            <svg aria-hidden="true">
+                              <use href="#icon-download"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <button class="files-drop-upload__file-delete">
+                        <?xml version="1.0" ?><svg
+                          viewBox="0 0 448 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M432 80h-82.38l-34-56.75C306.1 8.827 291.4 0 274.6 0H173.4C156.6 0 141 8.827 132.4 23.25L98.38 80H16C7.125 80 0 87.13 0 96v16C0 120.9 7.125 128 16 128H32v320c0 35.35 28.65 64 64 64h256c35.35 0 64-28.65 64-64V128h16C440.9 128 448 120.9 448 112V96C448 87.13 440.9 80 432 80zM171.9 50.88C172.9 49.13 174.9 48 177 48h94c2.125 0 4.125 1.125 5.125 2.875L293.6 80H154.4L171.9 50.88zM352 464H96c-8.837 0-16-7.163-16-16V128h288v320C368 456.8 360.8 464 352 464zM224 416c8.844 0 16-7.156 16-16V192c0-8.844-7.156-16-16-16S208 183.2 208 192v208C208 408.8 215.2 416 224 416zM144 416C152.8 416 160 408.8 160 400V192c0-8.844-7.156-16-16-16S128 183.2 128 192v208C128 408.8 135.2 416 144 416zM304 416c8.844 0 16-7.156 16-16V192c0-8.844-7.156-16-16-16S288 183.2 288 192v208C288 408.8 295.2 416 304 416z"
+                          />
+                        </svg>
+                        <span>Ta bort</span>
+                      </button>
+                    </div> -->
