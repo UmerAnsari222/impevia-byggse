@@ -5,65 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/app.css" />
-    <link rel="stylesheet" href="./css/chunck.css" />
+    <!-- <link rel="stylesheet" href="./css/chunck.css" /> -->
     <link rel="stylesheet" href="./css/home.css" />
     <title>Document</title>
   </head>
   <body>
     <div id="app" class="app">
-      <header class="the-header container app__header">
-        <picture class="the-header__bg-picture"
-          ><source
-            srcset="./img/4_xs.c030c4bf.jpg"
-            media="(max-width: 520px)"
-            style="object-position: center top" />
-          <source
-            srcset="./img/4_sm.656eeb42.jpg"
-            media="(max-width: 768px)"
-            style="object-position: center top" />
-          <source
-            srcset="./img/4_md.c942017a.jpg"
-            media="(max-width: 1024px)"
-            style="object-position: center top" />
-          <img
-            src="./img/4.af3a5b8a.jpg"
-            alt="header bg"
-            style="object-position: center top"
-        /></picture>
-        <div class="the-header__top">
-          <div class="the-header__top-content">
-            <div to="[object Object]" class="logo the-header__logo">
-              <img src="./img/logo.ec9d7849.svg" alt="Bygg logo" />
-            </div>
-            <!---->
-            <div class="the-header__btn-wrap _desc">
-              <button class="the-header__btn the-header__btn-menu">
-                <span class="the-header__btn-menu-ico"
-                  ><span></span><span></span><span></span
-                ></span></button
-              ><!---->
-            </div>
-            <button class="the-header__btn the-header__btn-menu _mob">
-              <span class="the-header__btn-menu-ico"
-                ><span></span><span></span><span></span
-              ></span>
-            </button>
-          </div>
-        </div>
-        <div class="the-header__middle container-inner">
-          <div class="the-header__middle-content">
-            <!---->
-            <h1 class="the-header__title">Ny offertförfrågan</h1>
-            <!----><!----><!---->
-          </div>
-        </div>
-        <!---->
-      </header>
       <main class="app__main">
         <div class="home-page container">
           <div
             id="main-first-block"
-            style="display: block"
+            style="display: none"
             class="home-page__content container-inner"
           >
             <div class="create-project home-page__create-page">
@@ -129,7 +81,7 @@
           </div>
 
           <div
-            style="display: none"
+            style="display: block"
             id="beskriv-section"
             class="home-page__content container-inner"
           >
@@ -157,17 +109,16 @@
                 </label>
                 <label
                   class="base-input create-project-description__input _shadow"
-                  rows="10"
-                  placeholder="Beskriv det du vill ha hjälp med, ju mer utförligt du beskriver desto större chans är det att en expert svarar på din förfrågan."
                 >
                   <span class="base-input__label"> Beskrivning </span>
+
                   <textarea
-                    id="beskrivning"
+                    cols="30"
                     rows="10"
-                    placeholder="Beskriv det du vill ha hjälp med, ju mer utförligt du beskriver desto större chans är det att en expert svarar på din förfrågan."
+                    id="beskrivning"
                     class="base-input__input"
-                  >
-                  </textarea>
+                    placeholder="Beskriv det du vill ha hjälp med, ju mer utförligt du beskriver desto större chans är det att en expert svarar på din förfrågan."
+                  ></textarea>
                 </label>
                 <div class="create-project-description__row">
                   <div
@@ -311,25 +262,6 @@
           </div>
         </div>
       </main>
-
-      <footer class="the-footer container app__footer">
-        <div class="the-footer__content container-inner">
-          <div to="[object Object]" class="logo the-footer__logo">
-            <img src="./img/logo-dark.0cc0e6da.svg" alt="Bygg logo" />
-          </div>
-          <div class="the-footer__text text">
-            <p>
-              BYGG.se är Sveriges största jämförelsesida för dig som står i
-              begrepp att bygga eller renovera hus. Vi är en samlingspunkt för
-              byggföretag, experter och husägare. Jämför omdömen, priser och
-              hustillverkare och lär dig mer genom vårt stora BYGGbibliotek med
-              steg för steg-artiklar, inspirerande reportage och informativa
-              artiklar om allt som rör bygg och renovering.
-            </p>
-          </div>
-        </div>
-      </footer>
-      <!---->
     </div>
 
     <script src="./js/index.js"></script>
