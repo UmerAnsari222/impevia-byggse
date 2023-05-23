@@ -73,84 +73,84 @@ let JagArOption = ["Privatperson", "Företag", "Bostadsrättsförening"];
 
 let questionIndex = 0;
 
-function createQuestionOneAndSuggestion(questionIndex) {
-  let question = questions[questionIndex];
-  //   console.log(question);
-  if (question.suggestions.length >= 0) {
-    for (let index = 0; index < question.suggestions.length; index++) {
-      const element = question.suggestions[index];
-      let label = document.createElement("label");
+// function createQuestionOneAndSuggestion(questionIndex) {
+//   let question = questions[questionIndex];
+//   //   console.log(question);
+//   if (question.suggestions.length >= 0) {
+//     for (let index = 0; index < question.suggestions.length; index++) {
+//       const element = question.suggestions[index];
+//       let label = document.createElement("label");
 
-      label.classList.add("base-radio-buttons__item");
+//       label.classList.add("base-radio-buttons__item");
 
-      let input = document.createElement("input");
-      input.setAttribute("type", "radio");
-      input.setAttribute("value", element);
+//       let input = document.createElement("input");
+//       input.setAttribute("type", "radio");
+//       input.setAttribute("value", element);
 
-      let span = document.createElement("span");
-      span.textContent = element;
-      span.classList.add("base-radio-buttons__item-content");
+//       let span = document.createElement("span");
+//       span.textContent = element;
+//       span.classList.add("base-radio-buttons__item-content");
 
-      label.insertAdjacentElement("afterbegin", input);
-      label.insertAdjacentElement("beforeend", span);
+//       label.insertAdjacentElement("afterbegin", input);
+//       label.insertAdjacentElement("beforeend", span);
 
-      buttonList.insertAdjacentElement("afterbegin", label);
-    }
-  }
-}
+//       buttonList.insertAdjacentElement("afterbegin", label);
+//     }
+//   }
+// }
 
-document.getElementById("postnummer").addEventListener("input", (e) => {
-  console.log(document.getElementById("postnummer").value);
-  if (document.getElementById("postnummer").value == "17563") {
-    console.log("Hello world");
-    document.getElementById("skicka-button").removeAttribute("disabled");
-  } else {
-    document
-      .getElementById("skicka-button")
-      .setAttribute("disabled", "disabled");
-  }
-});
+// document.getElementById("postnummer").addEventListener("input", (e) => {
+//   console.log(document.getElementById("postnummer").value);
+//   if (document.getElementById("postnummer").value == "17563") {
+//     console.log("Hello world");
+//     document.getElementById("skicka-button").removeAttribute("disabled");
+//   } else {
+//     document
+//       .getElementById("skicka-button")
+//       .setAttribute("disabled", "disabled");
+//   }
+// });
 
-createQuestionOneAndSuggestion(questionIndex);
+// createQuestionOneAndSuggestion(questionIndex);
 
-buttonListItem.childNodes.forEach((element, index) => {
-  element.addEventListener("click", (e) => {
-    if (selectedQuestionOne !== null) {
-      // console.log("Insiad IF");
-      //   selected.classList.remove("_checked");
-      selectedQuestionOne.classList.remove("_checked");
-      element.classList.add("_checked");
-      selectedQuestionOne = element;
-      document.getElementById("skicka-button").removeAttribute("disabled");
-    } else {
-      // console.log("ELSE");
-      //   selected.classList?.remove("_checked");
-      element.classList.add("_checked");
-      selectedQuestionOne = element;
-      document.getElementById("skicka-button").removeAttribute("disabled");
-    }
-  });
-});
+// buttonListItem.childNodes.forEach((element, index) => {
+//   element.addEventListener("click", (e) => {
+//     if (selectedQuestionOne !== null) {
+//       // console.log("Insiad IF");
+//       //   selected.classList.remove("_checked");
+//       selectedQuestionOne.classList.remove("_checked");
+//       element.classList.add("_checked");
+//       selectedQuestionOne = element;
+//       document.getElementById("skicka-button").removeAttribute("disabled");
+//     } else {
+//       // console.log("ELSE");
+//       //   selected.classList?.remove("_checked");
+//       element.classList.add("_checked");
+//       selectedQuestionOne = element;
+//       document.getElementById("skicka-button").removeAttribute("disabled");
+//     }
+//   });
+// });
 
-document.getElementById("skicka-button").addEventListener("click", () => {
-  if (questionIndex == 0) {
-    document.querySelector(
-      ".create-project-categories__list-wrap"
-    ).style.display = "none";
+// document.getElementById("skicka-button").addEventListener("click", () => {
+//   if (questionIndex == 0) {
+//     document.querySelector(
+//       ".create-project-categories__list-wrap"
+//     ).style.display = "none";
 
-    document.querySelector(
-      ".create-project-location__zip-input-wrap"
-    ).style.display = "block";
-    questionIndex += 1;
-    document
-      .getElementById("skicka-button")
-      .setAttribute("disabled", "disabled");
-  } else if (questionIndex == 1) {
-    questionIndex += 2;
-    document.querySelector("#main-first-block").style.display = "none";
-    document.querySelector("#beskriv-section").style.display = "block";
-  }
-});
+//     document.querySelector(
+//       ".create-project-location__zip-input-wrap"
+//     ).style.display = "block";
+//     questionIndex += 1;
+//     document
+//       .getElementById("skicka-button")
+//       .setAttribute("disabled", "disabled");
+//   } else if (questionIndex == 1) {
+//     questionIndex += 2;
+//     document.querySelector("#main-first-block").style.display = "none";
+//     document.querySelector("#beskriv-section").style.display = "block";
+//   }
+// });
 
 document.getElementById("projektets").addEventListener("input", () => {
   checkAll();
@@ -162,6 +162,7 @@ document.getElementById("beskrivning").addEventListener("input", () => {
 // document.getElementById("beskrivning").value.trim() != "" &&
 
 document.querySelector("#onskat-button").addEventListener("click", () => {
+  console.log("#onskat-button clicked");
   document.querySelector("#onskat-select").classList.toggle("_open");
   isCheck = true;
   let baseSelect = document.querySelector(".base-select__dropdown-wrap");
