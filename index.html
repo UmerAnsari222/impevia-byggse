@@ -37,7 +37,10 @@
                     id="onskat-select"
                     class="base-select create-project-description__input _shadow _large"
                   >
-                    <span class="base-input__label"> Önskat startdatum </span>
+                    <span class="base-input__label">
+                      Vad behöver du hjälp med?
+                    </span>
+                    <!-- <span class="base-input__label"> Önskat startdatum </span> -->
 
                     <div class="base-select__select">
                       <div class="base-select__container">
@@ -74,7 +77,8 @@
                     id="Jag-ar-select"
                     class="base-select create-project-description__input _shadow _large"
                   >
-                    <span class="base-input__label"> Jag är... </span>
+                    <span class="base-input__label"> Typ av fastighet? </span>
+                    <!-- <span class="base-input__label"> Jag är... </span> -->
 
                     <div class="base-select__select">
                       <div class="base-select__container">
@@ -113,17 +117,107 @@
                   </div>
                 </div>
 
+                <div class="create-project-description__row">
+                  <div
+                    id="plats-select"
+                    class="base-select create-project-description__input _shadow _large"
+                  >
+                    <span class="base-input__label"> Plats </span>
+                    <!-- <span class="base-input__label"> Önskat startdatum </span> -->
+
+                    <div class="base-select__select">
+                      <div class="base-select__container">
+                        <div
+                          id="base-select__value__plats"
+                          class="base-select__value"
+                        ></div>
+                        <!----><!---->
+                        <div id="plats-button" class="base-select__arrow">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="240"
+                            height="240"
+                            viewBox="0 0 24 24"
+                            style="fill: rgba(0, 0, 0, 1)"
+                          >
+                            <path
+                              d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        style="display: none"
+                        id="plats-select-item"
+                        class="base-select__dropdown-wrap"
+                      >
+                        <div
+                          id="plats-select-dropdown"
+                          class="base-select__dropdown"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <!---->
+                  </div>
+
+                  <div
+                    id="onskar-select"
+                    class="base-select create-project-description__input _shadow _large"
+                  >
+                    <span class="base-input__label"
+                      >När önskar du att få hjälp?</span
+                    >
+                    <!-- <span class="base-input__label"> Jag är... </span> -->
+
+                    <div class="base-select__select">
+                      <div class="base-select__container">
+                        <div
+                          id="base-select__value__onskar"
+                          class="base-select__value"
+                        ></div>
+                        <!----><!---->
+                        <div id="onskar-button" class="base-select__arrow">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="240"
+                            height="240"
+                            viewBox="0 0 24 24"
+                            style="fill: rgba(0, 0, 0, 1)"
+                          >
+                            <path
+                              d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        style="display: none"
+                        id="onskar-select-item"
+                        class="base-select__dropdown-wrap"
+                      >
+                        <div
+                          id="onskar-select-dropdown"
+                          class="base-select__dropdown"
+                        ></div>
+                      </div>
+                    </div>
+
+                    <!---->
+                  </div>
+                </div>
+
                 <label
                   class="base-input create-project-description__input _shadow"
                 >
-                  <span class="base-input__label"> Beskrivning </span>
+                  <span class="base-input__label"> Beskriv uppdraget </span>
 
                   <textarea
                     cols="30"
                     rows="10"
                     id="beskrivning"
                     class="base-input__input"
-                    placeholder="Beskriv det du vill ha hjälp med, ju mer utförligt du beskriver desto större chans är det att en expert svarar på din förfrågan."
+                    placeholder="En tydlig beskrivning ger fler och bättre svar..."
                   ></textarea>
                 </label>
 
@@ -137,6 +231,27 @@
                     id="projektets"
                     class="base-input__input"
                   />
+                </label>
+
+                <label
+                  class="base-input create-project-description__input _shadow"
+                >
+                  <span class="base-input__label"> Namn </span>
+                  <input id="namn" type="text" class="base-input__input" />
+                </label>
+
+                <label
+                  class="base-input create-project-description__input _shadow"
+                >
+                  <span class="base-input__label"> E-post </span>
+                  <input id="epost" type="text" class="base-input__input" />
+                </label>
+
+                <label
+                  class="base-input create-project-description__input _shadow"
+                >
+                  <span class="base-input__label"> Telefon </span>
+                  <input id="telefon" type="text" class="base-input__input" />
                 </label>
 
                 <h3 class="create-project-description__section-title">

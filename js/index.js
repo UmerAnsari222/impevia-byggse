@@ -60,16 +60,72 @@ let questions = [
   },
 ];
 
+// let onskatStartdatumOption = [
+//   "Snarast möjligt",
+//   "Inom 1 månad",
+//   "Inom 3 månader",
+//   "Inom 6 månader",
+//   "Inom 12 månader",
+//   "Ingen betydelse",
+// ];
+
 let onskatStartdatumOption = [
-  "Snarast möjligt",
-  "Inom 1 månad",
+  "Badrumsrenovering",
+  "Köksrenovering",
+  "Tvättstuga",
+  "Toalett",
+  "Totalrenovering",
+  "Tillbyggnad",
+  "Annat",
+];
+
+// let JagArOption = ["Privatperson", "Företag", "Bostadsrättsförening"];
+let JagArOption = [
+  "Lägenhet",
+  "Villa",
+  "Radhus",
+  "Fritidshus",
+  "Affärslokal",
+  "BRF",
+  "Annat",
+];
+
+let onskarOption = [
+  "Snarast",
   "Inom 3 månader",
   "Inom 6 månader",
   "Inom 12 månader",
-  "Ingen betydelse",
 ];
 
-let JagArOption = ["Privatperson", "Företag", "Bostadsrättsförening"];
+let palatsOption = [
+  "Botkyrka",
+  "Danderyd",
+  "Ekerö",
+  "Haninge",
+  "Huddinge",
+  "Järfälla",
+  "Lidingö",
+  "Nacka",
+  "Norrtälje",
+  "Nykvarn",
+  "Nynäshamn",
+  "Salem",
+  "Sigtuna",
+  "Sollentuna",
+  "Solna",
+  "Stockholm  Stad",
+  "Sundbyberg",
+  "Södertälje",
+  "Tyresö",
+  "Tyresö",
+  "Täby",
+  "Upplands-Bro",
+  "Upplands Väsby",
+  "Vallentuna",
+  "Vaxholm",
+  "Värmdö",
+  "Österåker",
+];
 
 let questionIndex = 0;
 
@@ -159,6 +215,17 @@ document.getElementById("projektets").addEventListener("input", () => {
 document.getElementById("beskrivning").addEventListener("input", () => {
   checkAll();
 });
+
+document.getElementById("telefon").addEventListener("input", () => {
+  checkAll();
+});
+document.getElementById("epost").addEventListener("input", () => {
+  checkAll();
+});
+document.getElementById("namn").addEventListener("input", () => {
+  checkAll();
+});
+
 // document.getElementById("beskrivning").value.trim() != "" &&
 
 document.querySelector("#onskat-button").addEventListener("click", () => {
@@ -176,7 +243,7 @@ document.querySelector("#onskat-button").addEventListener("click", () => {
       div.innerText = option;
       document
         .querySelector(".base-select__dropdown")
-        .insertAdjacentElement("afterbegin", div);
+        .insertAdjacentElement("beforeend", div);
     });
 
     baseSelect.style.display = "block";
@@ -205,7 +272,7 @@ document.querySelector("#Jag-ar-button").addEventListener("click", () => {
       div.innerText = option;
       document
         .querySelector("#Jag-ar-select-dropdown")
-        .insertAdjacentElement("afterbegin", div);
+        .insertAdjacentElement("beforeend", div);
     });
     baseSelect.style.display = "block";
     selectedDropdownItemJar = document.querySelectorAll(
@@ -217,6 +284,86 @@ document.querySelector("#Jag-ar-button").addEventListener("click", () => {
     baseSelect.style.display = "none";
   }
 });
+
+document.querySelector("#plats-button").addEventListener("click", () => {
+  document.querySelector("#plats-select").classList.toggle("_open");
+  isCheck = true;
+  let baseSelect = document.querySelector("#plats-select-item");
+  if (baseSelect.style.display == "none") {
+    document.querySelector("#plats-select-dropdown").innerHTML = "";
+
+    palatsOption.forEach((option) => {
+      let div = document.createElement("div");
+      div.setAttribute("class", "base-select__option");
+      div.classList.add("class", "base-select__option-plats-click");
+      div.innerText = option;
+      document
+        .querySelector("#plats-select-dropdown")
+        .insertAdjacentElement("beforeend", div);
+    });
+    baseSelect.style.display = "block";
+    selectedDropdownItemJar = document.querySelectorAll(
+      ".base-select__option-plats-click"
+    );
+    selectPlats(selectedDropdownItemJar);
+  } else {
+    document.querySelector("#plats-select-dropdown").innerHTML = "";
+    baseSelect.style.display = "none";
+  }
+});
+
+document.querySelector("#onskar-button").addEventListener("click", () => {
+  document.querySelector("#onskar-select").classList.toggle("_open");
+  isCheck = true;
+  let baseSelect = document.querySelector("#onskar-select-item");
+  if (baseSelect.style.display == "none") {
+    document.querySelector("#onskar-select-dropdown").innerHTML = "";
+
+    onskarOption.forEach((option) => {
+      let div = document.createElement("div");
+      div.setAttribute("class", "base-select__option");
+      div.classList.add("class", "base-select__option-onskar-click");
+      div.innerText = option;
+      document
+        .querySelector("#onskar-select-dropdown")
+        .insertAdjacentElement("beforeend", div);
+    });
+    baseSelect.style.display = "block";
+    selectedDropdownItemJar = document.querySelectorAll(
+      ".base-select__option-onskar-click"
+    );
+    selectOnskar(selectedDropdownItemJar);
+  } else {
+    document.querySelector("#onskar-select-dropdown").innerHTML = "";
+    baseSelect.style.display = "none";
+  }
+});
+
+function selectPlats(list) {
+  list.forEach((select) => {
+    select.addEventListener("click", () => {
+      document.querySelector("#base-select__value__plats").innerText =
+        select.textContent;
+      document.querySelector("#plats-select").classList.remove("_open");
+      let baseSelect = document.querySelector("#plats-select-item");
+      baseSelect.style.display = "none";
+      checkAll();
+    });
+  });
+}
+
+function selectOnskar(list) {
+  list.forEach((select) => {
+    select.addEventListener("click", () => {
+      document.querySelector("#base-select__value__onskar").innerText =
+        select.textContent;
+      document.querySelector("#onskar-select").classList.remove("_open");
+      let baseSelect = document.querySelector("#onskar-select-item");
+      baseSelect.style.display = "none";
+      checkAll();
+    });
+  });
+}
 
 function selectJar(list) {
   list.forEach((select) => {
@@ -287,7 +434,14 @@ function checkAll() {
   if (
     document.getElementById("projektets").value.trim() != "" &&
     document.getElementById("beskrivning").value.trim() != "" &&
+    document.getElementById("telefon").value.trim() != "" &&
+    document.getElementById("epost").value.trim() != "" &&
+    document.getElementById("namn").value.trim() != "" &&
     document.getElementById("base-select__value__onskat").textContent.trim() !=
+      "" &&
+    document.getElementById("base-select__value__onskar").textContent.trim() !=
+      "" &&
+    document.getElementById("base-select__value__plats").textContent.trim() !=
       "" &&
     document.getElementById("base-select__value__jar").textContent.trim() !=
       "" &&
