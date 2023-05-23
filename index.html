@@ -14,73 +14,6 @@
       <main class="app__main">
         <div class="home-page container">
           <div
-            id="main-first-block"
-            style="display: none"
-            class="home-page__content container-inner"
-          >
-            <div class="create-project home-page__create-page">
-              <div
-                class="create-project-categories create-project__step _categories"
-              >
-                <h2 class="create-project-categories__title">
-                  Vilken typ av expert söker du?
-                </h2>
-                <p class="create-project-categories__description">
-                  Vilken kategori passar bäst in på ditt projekt?
-                </p>
-                <div class="create-project-categories__list-wrap">
-                  <label
-                    class="base-input create-project-categories__search"
-                    placeholder="T.ex. snickare eller elektriker"
-                  >
-                    <input
-                      type="text"
-                      placeholder="T.ex. snickare eller elektriker"
-                      class="base-input__input"
-                    />
-                  </label>
-                  <div
-                    class="base-radio-buttons create-project-categories__list _vertical"
-                  >
-                    <div class="base-radio-buttons__list"></div>
-                  </div>
-                </div>
-
-                <div
-                  style="display: none"
-                  class="create-project-location__zip-input-wrap"
-                >
-                  <label
-                    class="base-input create-project-location__zip-input _shadow"
-                    autofocus="autofocus"
-                    ><span class="base-input__label"> Postnummer </span>
-                    <input
-                      id="postnummer"
-                      type="text"
-                      autofocus="autofocus"
-                      class="base-input__input"
-                    /><!----></label
-                  ><!---->
-                </div>
-              </div>
-              <!---->
-              <div class="create-project__footer">
-                <!-- <div
-                  class="create-project__footer-progress"
-                  style="width: 20%"
-                ></div> -->
-                <!----><button
-                  id="skicka-button"
-                  disabled="disabled"
-                  class="create-project__btn btn _accent"
-                >
-                  SKICKA FÖRFRÅGAN
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div
             style="display: block"
             id="beskriv-section"
             class="home-page__content container-inner"
@@ -92,34 +25,13 @@
                 <h2 class="create-project-description__title">
                   Beskriv projektet
                 </h2>
+
                 <p class="create-project-description__description">
                   Beskriv ditt projekt så detaljerat som möjligt. Det gör det
                   enklare för experten att bedöma om just ditt projekt är rätt
                   för dem.
                 </p>
-                <label
-                  class="base-input create-project-description__input _shadow"
-                >
-                  <span class="base-input__label"> Projektets namn </span>
-                  <input
-                    type="text"
-                    id="projektets"
-                    class="base-input__input"
-                  />
-                </label>
-                <label
-                  class="base-input create-project-description__input _shadow"
-                >
-                  <span class="base-input__label"> Beskrivning </span>
 
-                  <textarea
-                    cols="30"
-                    rows="10"
-                    id="beskrivning"
-                    class="base-input__input"
-                    placeholder="Beskriv det du vill ha hjälp med, ju mer utförligt du beskriver desto större chans är det att en expert svarar på din förfrågan."
-                  ></textarea>
-                </label>
                 <div class="create-project-description__row">
                   <div
                     id="onskat-select"
@@ -200,13 +112,42 @@
                     <!---->
                   </div>
                 </div>
+
+                <label
+                  class="base-input create-project-description__input _shadow"
+                >
+                  <span class="base-input__label"> Beskrivning </span>
+
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    id="beskrivning"
+                    class="base-input__input"
+                    placeholder="Beskriv det du vill ha hjälp med, ju mer utförligt du beskriver desto större chans är det att en expert svarar på din förfrågan."
+                  ></textarea>
+                </label>
+
+                <label
+                  class="base-input create-project-description__input _shadow"
+                >
+                  <span class="base-input__label"> Projektets namn </span>
+                  <input
+                    id="projektets"
+                    type="text"
+                    id="projektets"
+                    class="base-input__input"
+                  />
+                </label>
+
                 <h3 class="create-project-description__section-title">
                   Lägg till filer
                 </h3>
+
                 <p class="create-project-description__section-description">
                   Ju tydligare, desto bättre – här kan du ladda upp före-bilder,
                   ritningar och dokument som underlättar för experten.
                 </p>
+
                 <div
                   class="files-drop-upload create-project-description__files _shadow"
                 >
@@ -247,16 +188,19 @@
 
                   <div class="files-drop-upload__files"></div>
                 </div>
-              </div>
-              <!---->
-              <div class="create-project__footer">
-                <button
-                  id="skicka-button-last"
-                  disabled="disabled"
-                  class="create-project__btn btn _accent"
-                >
-                  SKICKA FÖRFRÅGAN
-                </button>
+
+                <!---->
+                <!-- <div class="create-project__footer"> -->
+                <div class="button-group-wrapper">
+                  <button
+                    id="skicka-button-last"
+                    disabled="disabled"
+                    class="create-project__btn btn _accent"
+                  >
+                    SKICKA FÖRFRÅGAN
+                  </button>
+                </div>
+                <!-- </div> -->
               </div>
             </div>
           </div>
