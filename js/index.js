@@ -1,9 +1,12 @@
 let buttonList = document.querySelector(".base-radio-buttons__list");
 let buttonListItem = document.querySelector(".base-radio-buttons__list");
 
+let checkBox = document.querySelector("#auth-form-agree");
+
 let selectedQuestionOne = null;
 
 let isCheck = false;
+let isAuthAgree = false;
 let selectedDropdownItemJar = document.querySelectorAll(
   ".base-select__option-jar-at-click"
 );
@@ -188,75 +191,89 @@ let questionIndex = 0;
 //   });
 // });
 
-// document.getElementById("skicka-button").addEventListener("click", () => {
-//   if (questionIndex == 0) {
-//     document.querySelector(
-//       ".create-project-categories__list-wrap"
-//     ).style.display = "none";
+document.getElementById("next-stage-button").addEventListener("click", () => {
+  console.log("Hello World");
+  document.querySelector("#beskriv-section").style.display = "none";
+  document.querySelector(".auth-registration-page").style.display = "block";
+});
 
-//     document.querySelector(
-//       ".create-project-location__zip-input-wrap"
-//     ).style.display = "block";
-//     questionIndex += 1;
-//     document
-//       .getElementById("skicka-button")
-//       .setAttribute("disabled", "disabled");
-//   } else if (questionIndex == 1) {
-//     questionIndex += 2;
-//     document.querySelector("#main-first-block").style.display = "none";
-//     document.querySelector("#beskriv-section").style.display = "block";
-//   }
+// document.getElementById("skicka-button").addEventListener("click", () => {});
+
+// document.getElementById("projektets").addEventListener("input", () => {
+//   checkAll();
 // });
 
-document.getElementById("projektets").addEventListener("input", () => {
-  checkAll();
+checkBox.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (checkBox.classList.contains("_checked") && isAuthAgree) {
+    console.log("IF ERROR");
+    checkBox.classList.remove("_checked");
+    isAuthAgree = false;
+    checkAllPageAuth();
+  } else {
+    console.log("ELSE ERROR");
+    checkBox.classList.add("_checked");
+    isAuthAgree = true;
+    checkAllPageAuth();
+  }
+  // checkBox.classList.add("_checked");
 });
 
 document.getElementById("beskrivning").addEventListener("input", () => {
   checkAll();
 });
 
-document.getElementById("telefon").addEventListener("input", () => {
-  checkAll();
-});
-document.getElementById("epost").addEventListener("input", () => {
-  checkAll();
-});
+// document.getElementById("epost").addEventListener("input", () => {
+//   checkAll();
+// });
+
 document.getElementById("namn").addEventListener("input", () => {
-  checkAll();
+  checkAllPageAuth();
+});
+
+document.getElementById("efternamn").addEventListener("input", () => {
+  checkAllPageAuth();
+});
+
+document.getElementById("mejl").addEventListener("input", () => {
+  checkAllPageAuth();
+});
+
+document.getElementById("telefon").addEventListener("input", () => {
+  checkAllPageAuth();
 });
 
 // document.getElementById("beskrivning").value.trim() != "" &&
 
-document.querySelector("#onskat-button").addEventListener("click", () => {
-  console.log("#onskat-button clicked");
-  document.querySelector("#onskat-select").classList.toggle("_open");
-  isCheck = true;
-  let baseSelect = document.querySelector(".base-select__dropdown-wrap");
-  if (baseSelect.style.display == "none") {
-    document.querySelector(".base-select__dropdown").innerHTML = "";
+// document.querySelector("#onskat-button").addEventListener("click", () => {
+//   console.log("#onskat-button clicked");
+//   document.querySelector("#onskat-select").classList.toggle("_open");
+//   isCheck = true;
+//   let baseSelect = document.querySelector(".base-select__dropdown-wrap");
+//   if (baseSelect.style.display == "none") {
+//     document.querySelector(".base-select__dropdown").innerHTML = "";
 
-    onskatStartdatumOption.forEach((option) => {
-      let div = document.createElement("div");
-      div.setAttribute("class", "base-select__option");
-      div.classList.add("class", "base-select__option-onskat-click");
-      div.innerText = option;
-      document
-        .querySelector(".base-select__dropdown")
-        .insertAdjacentElement("beforeend", div);
-    });
+//     onskatStartdatumOption.forEach((option) => {
+//       let div = document.createElement("div");
+//       div.setAttribute("class", "base-select__option");
+//       div.classList.add("class", "base-select__option-onskat-click");
+//       div.innerText = option;
+//       document
+//         .querySelector(".base-select__dropdown")
+//         .insertAdjacentElement("beforeend", div);
+//     });
 
-    baseSelect.style.display = "block";
+//     baseSelect.style.display = "block";
 
-    selectedDropdownItemJar = document.querySelectorAll(
-      ".base-select__option-onskat-click"
-    );
-    selectOnskat(selectedDropdownItemJar);
-  } else {
-    document.querySelector(".base-select__dropdown").innerHTML = "";
-    baseSelect.style.display = "none";
-  }
-});
+//     selectedDropdownItemJar = document.querySelectorAll(
+//       ".base-select__option-onskat-click"
+//     );
+//     selectOnskat(selectedDropdownItemJar);
+//   } else {
+//     document.querySelector(".base-select__dropdown").innerHTML = "";
+//     baseSelect.style.display = "none";
+//   }
+// });
 
 document.querySelector("#Jag-ar-button").addEventListener("click", () => {
   document.querySelector("#Jag-ar-select").classList.toggle("_open");
@@ -428,34 +445,50 @@ document.getElementById("select-file").addEventListener("input", () => {
 
 function handleClick(params) {
   document.getElementById(params).remove();
+  checkAll();
 }
 
 function checkAll() {
+  console.log(
+    document.querySelector(".files-drop-upload__files").childNodes.length
+  );
+  console.log(document.querySelector(".files-drop-upload__files").childNodes);
   if (
-    document.getElementById("projektets").value.trim() != "" &&
     document.getElementById("beskrivning").value.trim() != "" &&
-    document.getElementById("telefon").value.trim() != "" &&
-    document.getElementById("epost").value.trim() != "" &&
-    document.getElementById("namn").value.trim() != "" &&
-    document.getElementById("base-select__value__onskat").textContent.trim() !=
-      "" &&
     document.getElementById("base-select__value__onskar").textContent.trim() !=
       "" &&
     document.getElementById("base-select__value__plats").textContent.trim() !=
       "" &&
     document.getElementById("base-select__value__jar").textContent.trim() !=
       "" &&
-    document.querySelector(".files-drop-upload__files").childNodes.length > 0
+    document.querySelector(".files-drop-upload__files").childNodes.length > 1
   ) {
     console.log(true);
-    console.log(document.getElementById("skicka-button"));
-    document.getElementById("skicka-button-last").removeAttribute("disabled");
+    document.getElementById("next-stage-button").removeAttribute("disabled");
 
     return true;
   } else {
     document
-      .getElementById("skicka-button-last")
+      .getElementById("next-stage-button")
       .setAttribute("disabled", "disabled");
+    return false;
+  }
+}
+
+function checkAllPageAuth() {
+  if (
+    document.getElementById("telefon").value.trim() != "" &&
+    document.getElementById("mejl").value.trim() != "" &&
+    document.getElementById("efternamn").value.trim() != "" &&
+    checkBox.classList.contains("_checked") != "" &&
+    document.getElementById("namn").value.trim() != ""
+  ) {
+    console.log(true);
+    console.log(document.getElementById("#auth-button"));
+    document.querySelector("#auth-button").removeAttribute("disabled");
+    return true;
+  } else {
+    document.querySelector("#auth-button").setAttribute("disabled", "disabled");
     return false;
   }
 }
