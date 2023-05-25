@@ -599,66 +599,8 @@ textarea {
   white-space: pre-wrap;
 }
 
-.v-toast__item {
-  min-height: 3em;
-}
-
-.v-toast__item--error {
-  background-color: #d90000;
-}
-
-.v-toast__item .v-toast__text {
-  padding: 1em 1em;
-}
-
 .cool-lightbox h6 {
   color: inherit;
-}
-
-.vue-dialog.vm--modal {
-  border-radius: 6px;
-}
-
-.vue-dialog .vue-dialog-content-title {
-  font-family: Gilroy, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-}
-
-.vue-dialog .vue-dialog-content {
-  padding: 20px;
-}
-
-.vue-dialog .vue-dialog-buttons {
-  padding: 0 20px 20px;
-  border: 0;
-}
-
-.vue-dialog .vue-dialog-buttons .btn {
-  margin-right: 10px;
-  flex-grow: 0;
-}
-
-.vue-dialog .vue-dialog-buttons .btn:last-child {
-  margin-right: 0;
-}
-
-.vue-dialog .vue-dialog-buttons .btn._danger:hover {
-  background-color: #d90000;
-  border-color: #d90000;
-  color: #fff;
-}
-
-.vue-dialog .vue-dialog-buttons .btn._cancel:hover {
-  background-color: #707070;
-  border-color: #707070;
-  color: #fff;
-}
-
-.vue-dialog .vue-dialog-buttons .btn._accept:hover {
-  background-color: #007f8f;
-  border-color: #007f8f;
-  color: #fff;
 }
 
 .btn {
@@ -936,10 +878,24 @@ textarea {
   }
 }
 
+.the-header__logo img {
+  display: block;
+  /* width: 30px; */
+}
+
+.the-header__logo.centered img {
+  display: none;
+  /* width: 30px; */
+}
+
 @media screen and (max-width: 500px) {
   .the-header__logo img {
-    height: 15px !important;
+    display: none;
+  }
+  .the-header__logo.centered img {
+    height: 20px !important;
     margin-left: -10px;
+    display: block;
     /* width: 30px; */
   }
 }
