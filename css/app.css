@@ -893,7 +893,7 @@ textarea {
     display: none;
   }
   .the-header__logo.centered img {
-    height: 20px !important;
+    height: 25px !important;
     margin-left: -10px;
     display: block;
     /* width: 30px; */
