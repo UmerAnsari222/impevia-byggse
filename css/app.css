@@ -936,6 +936,14 @@ textarea {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .the-header__logo img {
+    height: 15px !important;
+    margin-left: -10px;
+    /* width: 30px; */
+  }
+}
+
 .change-locale {
   position: relative;
   display: flex;
