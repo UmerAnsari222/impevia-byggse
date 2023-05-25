@@ -2586,7 +2586,7 @@ button.change-locale__btn {
 }
 
 .auth-form__btn {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 520px) {
