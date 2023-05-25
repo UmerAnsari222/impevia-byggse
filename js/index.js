@@ -235,9 +235,9 @@ document.getElementById("efternamn").addEventListener("input", () => {
   checkAllPageAuth();
 });
 
-document.getElementById("mejl").addEventListener("input", () => {
-  checkAllPageAuth();
-});
+// document.getElementById("mejl").addEventListener("input", () => {
+//   checkAllPageAuth();
+// });
 
 document.getElementById("telefon").addEventListener("input", () => {
   checkAllPageAuth();
@@ -449,19 +449,19 @@ function handleClick(params) {
 }
 
 function checkAll() {
-  console.log(
-    document.querySelector(".files-drop-upload__files").childNodes.length
-  );
-  console.log(document.querySelector(".files-drop-upload__files").childNodes);
+  // console.log(
+  //   document.querySelector(".files-drop-upload__files").childNodes.length
+  // );
+  // console.log(document.querySelector(".files-drop-upload__files").childNodes);
   if (
     document.getElementById("beskrivning").value.trim() != "" &&
     document.getElementById("base-select__value__onskar").textContent.trim() !=
       "" &&
     document.getElementById("base-select__value__plats").textContent.trim() !=
       "" &&
-    document.getElementById("base-select__value__jar").textContent.trim() !=
-      "" &&
-    document.querySelector(".files-drop-upload__files").childNodes.length > 1
+    document.getElementById("base-select__value__jar").textContent.trim() != ""
+    //   &&
+    // document.querySelector(".files-drop-upload__files").childNodes.length > 1
   ) {
     console.log(true);
     document.getElementById("next-stage-button").removeAttribute("disabled");
@@ -478,7 +478,7 @@ function checkAll() {
 function checkAllPageAuth() {
   if (
     document.getElementById("telefon").value.trim() != "" &&
-    document.getElementById("mejl").value.trim() != "" &&
+    // document.getElementById("mejl").value.trim() != "" &&
     document.getElementById("efternamn").value.trim() != "" &&
     checkBox.classList.contains("_checked") != "" &&
     document.getElementById("namn").value.trim() != ""
