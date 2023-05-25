@@ -894,7 +894,7 @@ textarea {
   }
   .the-header__logo.centered img {
     height: 30px !important;
-    margin-left: -40px;
+    margin-left: -30px;
     display: block;
     /* width: 30px; */
   }
