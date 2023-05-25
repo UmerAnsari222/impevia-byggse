@@ -1810,7 +1810,8 @@ button.change-locale__btn {
 }
 
 .base-input._shadow .base-input__input {
-  box-shadow: 0 30px 80px 0 rgba(0, 0, 0, 0.12);
+  /* box-shadow: 0 30px 80px 0 rgba(0, 0, 0, 0.12); */
+  box-shadow: 0 18px 40px 0 rgba(0, 0, 0, 0.12);
   border-color: #fff;
 }
 
