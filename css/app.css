@@ -893,8 +893,8 @@ textarea {
     display: none;
   }
   .the-header__logo.centered img {
-    height: 35px !important;
-    margin-left: -10px;
+    height: 30px !important;
+    margin-left: -40px;
     display: block;
     /* width: 30px; */
   }
