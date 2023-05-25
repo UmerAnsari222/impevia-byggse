@@ -489,74 +489,11 @@
   max-width: 710px;
 }
 
-.create-project__step._thanks {
-  max-width: 468px;
-}
-
-.create-project__error {
-  margin: 30px auto 0;
-  max-width: 710px;
-}
-
-.create-project__footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.create-project__footer-progress {
-  display: none;
-}
-
-.create-project__btn {
-  min-width: 152px;
-  margin-right: 20px;
-}
-
-.create-project__btn:last-child {
-  margin-right: 0;
-}
-
-.create-project__btn._outlined {
-  border-color: #e7eaf0;
-  color: #b8b8b8;
-}
-
 @media screen and (max-width: 520px) {
   .create-project__btn {
     min-width: 0;
     width: 20%;
     flex-grow: 1;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .create-project__footer {
-    position: fixed;
-    z-index: 81;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background: #fff;
-    padding: 15px 25px;
-  }
-
-  .create-project__footer-progress {
-    display: block;
-    position: absolute;
-    left: 0;
-    bottom: 100%;
-    height: 3px;
-    background-color: #707070;
-    transition: 0.15s;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  .create-project__footer {
-    padding: 15px 25px;
   }
 }
 
