@@ -2611,3 +2611,7 @@ button.change-locale__btn {
   max-width: 470px;
   margin: 0 auto;
 }
+
+.upload {
+  width: 40px !important;
+}
