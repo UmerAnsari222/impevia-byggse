@@ -2585,6 +2585,10 @@ button.change-locale__btn {
   transform: rotate(-90deg);
 }
 
+.auth-form__btn {
+  font-weight: 600;
+}
+
 @media screen and (max-width: 520px) {
   .auth-form__row {
     flex-wrap: wrap;
