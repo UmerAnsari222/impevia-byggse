@@ -11,58 +11,6 @@ let selectedDropdownItemJar = document.querySelectorAll(
   ".base-select__option-jar-at-click"
 );
 
-let questions = [
-  {
-    id: 0,
-    name: "T.ex. snickare eller elektriker",
-    type: "radio",
-    suggestions: [
-      "Akustikisolering",
-      "Andra bygginstallationer",
-      "Arborist",
-      "Arkitekt",
-      "Badrum",
-      "Byggföretag",
-      "Byggkonsult",
-      "Dränering och fuktskydd",
-      "Elektriker",
-      "Fotografering",
-      "Gasarbeten",
-      "Golvarbeten",
-      "Grävarbeten",
-      "Inredare",
-      "Landskapsarkitekt",
-      "Markarbete",
-      "Microcement",
-      "Muddring",
-      "Mur- och putsarbeten",
-      "Målning",
-      "Möbelrenovering",
-      "Möbelsnickare",
-      "Plåtslagare",
-      "Poolbyggnation",
-      "Rivning",
-      "Rörmokare",
-      "Sanering",
-      "Snickare",
-      "Snickeriarbeten",
-      "Sotare",
-      "Spackling",
-      "Ställningsarbeten",
-      "Takarbete",
-      "Trädgårdsarbeten",
-      "Ventilation",
-    ],
-  },
-
-  {
-    id: 1,
-    name: "Postnummer",
-    type: "textarea",
-    suggestions: [],
-  },
-];
-
 // let onskatStartdatumOption = [
 //   "Snarast möjligt",
 //   "Inom 1 månad",
@@ -132,76 +80,11 @@ let palatsOption = [
 
 let questionIndex = 0;
 
-// function createQuestionOneAndSuggestion(questionIndex) {
-//   let question = questions[questionIndex];
-//   //   console.log(question);
-//   if (question.suggestions.length >= 0) {
-//     for (let index = 0; index < question.suggestions.length; index++) {
-//       const element = question.suggestions[index];
-//       let label = document.createElement("label");
-
-//       label.classList.add("base-radio-buttons__item");
-
-//       let input = document.createElement("input");
-//       input.setAttribute("type", "radio");
-//       input.setAttribute("value", element);
-
-//       let span = document.createElement("span");
-//       span.textContent = element;
-//       span.classList.add("base-radio-buttons__item-content");
-
-//       label.insertAdjacentElement("afterbegin", input);
-//       label.insertAdjacentElement("beforeend", span);
-
-//       buttonList.insertAdjacentElement("afterbegin", label);
-//     }
-//   }
-// }
-
-// document.getElementById("postnummer").addEventListener("input", (e) => {
-//   console.log(document.getElementById("postnummer").value);
-//   if (document.getElementById("postnummer").value == "17563") {
-//     console.log("Hello world");
-//     document.getElementById("skicka-button").removeAttribute("disabled");
-//   } else {
-//     document
-//       .getElementById("skicka-button")
-//       .setAttribute("disabled", "disabled");
-//   }
-// });
-
-// createQuestionOneAndSuggestion(questionIndex);
-
-// buttonListItem.childNodes.forEach((element, index) => {
-//   element.addEventListener("click", (e) => {
-//     if (selectedQuestionOne !== null) {
-//       // console.log("Insiad IF");
-//       //   selected.classList.remove("_checked");
-//       selectedQuestionOne.classList.remove("_checked");
-//       element.classList.add("_checked");
-//       selectedQuestionOne = element;
-//       document.getElementById("skicka-button").removeAttribute("disabled");
-//     } else {
-//       // console.log("ELSE");
-//       //   selected.classList?.remove("_checked");
-//       element.classList.add("_checked");
-//       selectedQuestionOne = element;
-//       document.getElementById("skicka-button").removeAttribute("disabled");
-//     }
-//   });
-// });
-
 document.getElementById("next-stage-button").addEventListener("click", () => {
   console.log("Hello World");
   document.querySelector("#beskriv-section").style.display = "none";
   document.querySelector(".auth-registration-page").style.display = "block";
 });
-
-// document.getElementById("skicka-button").addEventListener("click", () => {});
-
-// document.getElementById("projektets").addEventListener("input", () => {
-//   checkAll();
-// });
 
 checkBox.addEventListener("click", (event) => {
   event.preventDefault();
@@ -223,10 +106,6 @@ document.getElementById("beskrivning").addEventListener("input", () => {
   checkAll();
 });
 
-// document.getElementById("epost").addEventListener("input", () => {
-//   checkAll();
-// });
-
 document.getElementById("namn").addEventListener("input", () => {
   checkAllPageAuth();
 });
@@ -235,45 +114,9 @@ document.getElementById("efternamn").addEventListener("input", () => {
   checkAllPageAuth();
 });
 
-// document.getElementById("mejl").addEventListener("input", () => {
-//   checkAllPageAuth();
-// });
-
 document.getElementById("telefon").addEventListener("input", () => {
   checkAllPageAuth();
 });
-
-// document.getElementById("beskrivning").value.trim() != "" &&
-
-// document.querySelector("#onskat-button").addEventListener("click", () => {
-//   console.log("#onskat-button clicked");
-//   document.querySelector("#onskat-select").classList.toggle("_open");
-//   isCheck = true;
-//   let baseSelect = document.querySelector(".base-select__dropdown-wrap");
-//   if (baseSelect.style.display == "none") {
-//     document.querySelector(".base-select__dropdown").innerHTML = "";
-
-//     onskatStartdatumOption.forEach((option) => {
-//       let div = document.createElement("div");
-//       div.setAttribute("class", "base-select__option");
-//       div.classList.add("class", "base-select__option-onskat-click");
-//       div.innerText = option;
-//       document
-//         .querySelector(".base-select__dropdown")
-//         .insertAdjacentElement("beforeend", div);
-//     });
-
-//     baseSelect.style.display = "block";
-
-//     selectedDropdownItemJar = document.querySelectorAll(
-//       ".base-select__option-onskat-click"
-//     );
-//     selectOnskat(selectedDropdownItemJar);
-//   } else {
-//     document.querySelector(".base-select__dropdown").innerHTML = "";
-//     baseSelect.style.display = "none";
-//   }
-// });
 
 document.querySelector("#Jag-ar-button").addEventListener("click", () => {
   document.querySelector("#Jag-ar-select").classList.toggle("_open");
@@ -354,6 +197,11 @@ document.querySelector("#onskar-button").addEventListener("click", () => {
     document.querySelector("#onskar-select-dropdown").innerHTML = "";
     baseSelect.style.display = "none";
   }
+});
+
+document.querySelector("#auth-button").addEventListener("click", () => {
+  document.querySelector(".auth-registration-page").style.display = "none";
+  document.querySelector("._thank_page").style.display = "block";
 });
 
 function selectPlats(list) {
@@ -484,7 +332,6 @@ function checkAllPageAuth() {
     document.getElementById("namn").value.trim() != ""
   ) {
     console.log(true);
-    console.log(document.getElementById("#auth-button"));
     document.querySelector("#auth-button").removeAttribute("disabled");
     return true;
   } else {

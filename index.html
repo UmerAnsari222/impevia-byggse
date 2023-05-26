@@ -12,32 +12,6 @@
   <body>
     <div id="app" class="app">
       <header class="the-header container app__header">
-        <!-- <picture class="the-header__bg-picture"
-          ><source
-            srcset="./img/4_xs.c030c4bf.jpg"
-            media="(max-width: 520px)"
-            style="object-position: center top" />
-          <source
-            srcset="./img/4_sm.656eeb42.jpg"
-            media="(max-width: 768px)"
-            style="object-position: center top" />
-          <source
-            srcset="./img/4_md.c942017a.jpg"
-            media="(max-width: 1024px)"
-            style="object-position: center top" />
-          <img
-            src="./img/4.af3a5b8a.jpg"
-            alt="header bg"
-            style="object-position: center top"
-        /></picture> -->
-
-        <!-- <picture class="the-header__bg-picture">
-          <source
-            style="object-position: center top"
-            srcset="./img/52F77576-D47A-48CD-A2E1-7429A16BF417.jpeg"
-          />
-        </picture> -->
-
         <img
           class="the-header__bg-picture"
           src="./img/E4121322-4B05-489E-8FC0-28F6BC6781BD.jpeg"
@@ -322,14 +296,16 @@
                 </p>
 
                 <div
-                  style="
-                    background-color: #202433;
-                    color: #ffffff;
-                    border-radius: 6px;
-                  "
                   class="files-drop-upload create-project-description__files _shadow"
                 >
-                  <label class="files-drop-upload__dropzone">
+                  <label
+                    style="
+                      background-color: #202433;
+                      color: #ffffff;
+                      border-radius: 6px;
+                    "
+                    class="files-drop-upload__dropzone"
+                  >
                     <div class="files-drop-upload__dropzone-content">
                       <!-- <div class="files-drop-upload__dropzone-title">
                         Släpp dina filer här
@@ -402,7 +378,7 @@
                 renoveringsföretag.
               </p>
 
-              <form class="auth-registration-page__form auth-form">
+              <div class="auth-registration-page__form auth-form">
                 <div class="auth-form__row">
                   <label class="base-input auth-form__input" name="name">
                     <span class="base-input__label"> Namn </span>
@@ -467,7 +443,85 @@
                 >
                   SKICKA FÖRFRÅGAN
                 </button>
-              </form>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="display: none"
+            class="auth-registration-page container _thank_page"
+          >
+            <div class="auth-registration-page__content container-inner">
+              <h2 class="auth-registration-page__title">
+                Tack för din förfrågan!
+              </h2>
+              <p class="auth-registration-page__description">
+                Vi kommer nu att granska din förfrågan sedan kommer den att
+                publiceras för våra anslutna webbyråer
+              </p>
+
+              <div class="auth-registration-page__form auth-form">
+                <!-- <div class="auth-form__row">
+                  <label class="base-input auth-form__input" name="name">
+                    <span class="base-input__label"> Namn </span>
+                    <input
+                      id="namn"
+                      type="text"
+                      name="name"
+                      class="base-input__input"
+                    />
+                  </label>
+                  <label class="base-input auth-form__input" name="surname">
+                    <span class="base-input__label"> E-post </span>
+                    <input
+                      id="efternamn"
+                      type="text"
+                      name="surname"
+                      class="base-input__input"
+                    />
+                  </label>
+                </div>
+
+                <div class="auth-form__row">
+                  <label
+                    class="base-input auth-form__input"
+                    type="tel"
+                    name="phone"
+                  >
+                    <span class="base-input__label"> Telefon </span>
+                    <input
+                      id="telefon"
+                      type="tel"
+                      name="phone"
+                      class="base-input__input"
+                    />
+                  </label>
+                </div>
+
+                <div class="auth-form__row">
+                  <label
+                    for="agree"
+                    id="auth-form-agree"
+                    class="base-checkbox auth-form__agree"
+                  >
+                    <input
+                      type="checkbox"
+                      id="agree"
+                      name="agree"
+                      value="agree"
+                    />
+
+                    <span class="base-checkbox__content">
+                      Jag godkänner
+                      <a href="#" class="" target="_blank"> användarvillkor </a>
+                    </span>
+                  </label>
+                </div> -->
+
+                <button id="auth-button" class="auth-form__btn btn">
+                  Tillbaka till startsidan
+                </button>
+              </div>
             </div>
           </div>
         </div>
