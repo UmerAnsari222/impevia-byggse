@@ -954,7 +954,7 @@ button.change-locale__btn {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #51626b url(../img/company-bg.c26c832d.jpg) no-repeat 50%;
+  /* background: #51626b url(../img/company-bg.c26c832d.jpg) no-repeat 50%; */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -966,7 +966,7 @@ button.change-locale__btn {
 }
 
 .the-mobile-menu._customer {
-  background-image: url(../img/customer-bg.f1d2e837.jpg);
+  /* background-image: url(../img/customer-bg.f1d2e837.jpg); */
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1080,13 +1080,6 @@ button.change-locale__btn {
 }
 
 @media screen and (max-width: 768px) {
-  .the-mobile-menu {
-    background-image: url(../img/company-bg-sm.7ce86522.jpg);
-  }
-
-  .the-mobile-menu._customer {
-    background-image: url(../img/customer-bg-sm.2035a79b.jpg);
-  }
 }
 
 .drop-menu {
@@ -1558,7 +1551,7 @@ button.change-locale__btn {
 
 @media screen and (max-width: 520px) {
   .the-header {
-    background-image: url(../img/1_xs.e06a5463.jpg);
+    /* background-image: url(../img/1_xs.e06a5463.jpg); */
   }
 }
 
