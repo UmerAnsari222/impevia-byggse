@@ -890,7 +890,9 @@ textarea {
 
 @media screen and (max-width: 500px) {
   .the-header__logo img {
-    display: none;
+    /* display: none; */
+    height: 20px !important;
+    margin-left: -20px;
   }
   .the-header__logo.centered img {
     height: 30px !important;
