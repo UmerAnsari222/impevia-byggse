@@ -80,13 +80,13 @@ let palatsOption = [
 
 let questionIndex = 0;
 
-document.getElementById("next-stage-button").addEventListener("click", () => {
+document.getElementById("next-stage-button")?.addEventListener("click", () => {
   console.log("Hello World");
   document.querySelector("#beskriv-section").style.display = "none";
   document.querySelector(".auth-registration-page").style.display = "block";
 });
 
-checkBox.addEventListener("click", (event) => {
+checkBox?.addEventListener("click", (event) => {
   event.preventDefault();
   if (checkBox.classList.contains("_checked") && isAuthAgree) {
     console.log("IF ERROR");
@@ -123,6 +123,7 @@ document.querySelector("#plats-button").addEventListener("click", () => {
   isCheck = true;
   let baseSelect = document.querySelector("#plats-select-item");
   if (baseSelect.style.display == "none") {
+    console.log("Hello dnv,snd,vns,dnv,sndv,sn,v");
     document.querySelector("#plats-select-dropdown").innerHTML = "";
 
     palatsOption.forEach((option) => {
@@ -134,6 +135,7 @@ document.querySelector("#plats-button").addEventListener("click", () => {
         .querySelector("#plats-select-dropdown")
         .insertAdjacentElement("beforeend", div);
     });
+    document.querySelector("#plats-select-dropdown").style.display = "block";
     baseSelect.style.display = "block";
     selectedDropdownItemJar = document.querySelectorAll(
       ".base-select__option-plats-click"
@@ -161,6 +163,7 @@ document.querySelector("#Jag-ar-button").addEventListener("click", () => {
         .querySelector("#Jag-ar-select-dropdown")
         .insertAdjacentElement("beforeend", div);
     });
+    document.querySelector("#Jag-ar-select-dropdown").style.display = "block";
     baseSelect.style.display = "block";
     selectedDropdownItemJar = document.querySelectorAll(
       ".base-select__option-jar-at-click"
@@ -188,6 +191,7 @@ document.querySelector("#onskar-button").addEventListener("click", () => {
         .querySelector("#onskar-select-dropdown")
         .insertAdjacentElement("beforeend", div);
     });
+    document.querySelector("#onskar-select-dropdown").style.display = "block";
     baseSelect.style.display = "block";
     selectedDropdownItemJar = document.querySelectorAll(
       ".base-select__option-onskar-click"
@@ -212,6 +216,7 @@ function selectPlats(list) {
         select.textContent;
 
       // document.querySelector("#plats-select").classList.remove("_open");
+      // document.querySelector("#plats-select-item").style.display = "none";
       let baseSelect = document.querySelector("#plats-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();

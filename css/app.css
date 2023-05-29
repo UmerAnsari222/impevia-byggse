@@ -2506,3 +2506,80 @@ button.change-locale__btn {
 .upload {
   width: 40px !important;
 }
+
+.agreements-page__content {
+  padding: 30px 0;
+}
+
+.agreements-page__title {
+  margin: 0 0 19px;
+  font-size: 24px;
+}
+
+.agreements-page__date {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.agreements-page__name {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.agreements-page__description {
+  margin: 0;
+}
+
+.agreements-page__description .text p {
+  margin: 12px 0;
+}
+
+.agreements-page__content {
+  padding: 30px 0;
+}
+
+.container-inner {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 520px) {
+  .agreements-page__title {
+    font-size: 18px;
+  }
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 1367px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 1367px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
