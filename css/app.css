@@ -880,6 +880,10 @@ textarea {
 } */
 
 @media screen and (max-width: 500px) {
+  .the-header {
+    min-height: 280px !important;
+  }
+
   .the-header__logo img {
     display: none;
     height: 20px !important;
