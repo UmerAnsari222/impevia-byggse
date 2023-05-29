@@ -75,14 +75,13 @@
                     <span class="base-input__label"> Plats </span>
                     <!-- <span class="base-input__label"> Önskat startdatum </span> -->
 
-                    <div class="base-select__select">
+                    <div id="plats-button" class="base-select__select">
                       <div class="base-select__container">
                         <div
                           id="base-select__value__plats"
                           class="base-select__value"
                         ></div>
-                        <!----><!---->
-                        <div id="plats-button" class="base-select__arrow">
+                        <div class="base-select__arrow">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="240"
@@ -117,14 +116,14 @@
                   >
                     <span class="base-input__label"> Typ av bostad? </span>
 
-                    <div class="base-select__select">
+                    <div id="Jag-ar-button" class="base-select__select">
                       <div class="base-select__container">
                         <div
                           id="base-select__value__jar"
                           class="base-select__value"
                         ></div>
                         <!----><!---->
-                        <div id="Jag-ar-button" class="base-select__arrow">
+                        <div class="base-select__arrow">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="240"
@@ -169,43 +168,6 @@
                 </label>
 
                 <div class="create-project-description__row">
-                  <!-- <div
-                    id="onskat-select"
-                    class="base-select create-project-description__input _shadow _large"
-                  >
-                    <span class="base-input__label">
-                      Vad behöver du hjälp med?
-                    </span>
-
-                    <div class="base-select__select">
-                      <div class="base-select__container">
-                        <div
-                          id="base-select__value__onskat"
-                          class="base-select__value"
-                        ></div>
-                        <div id="onskat-button" class="base-select__arrow">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="240"
-                            height="240"
-                            viewBox="0 0 24 24"
-                            style="fill: rgba(0, 0, 0, 1)"
-                          >
-                            <path
-                              d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
-                            ></path>
-                          </svg>
-                        </div>
-                      </div>
-                      <div
-                        style="display: none"
-                        class="base-select__dropdown-wrap"
-                      >
-                        <div class="base-select__dropdown"></div>
-                      </div>
-                    </div>
-                  </div> -->
-
                   <div
                     id="onskar-select"
                     class="base-select create-project-description__input _shadow _large"
@@ -215,14 +177,13 @@
                     >
                     <!-- <span class="base-input__label"> Jag är... </span> -->
 
-                    <div class="base-select__select">
+                    <div id="onskar-button" class="base-select__select">
                       <div class="base-select__container">
                         <div
                           id="base-select__value__onskar"
                           class="base-select__value"
                         ></div>
-                        <!----><!---->
-                        <div id="onskar-button" class="base-select__arrow">
+                        <div class="base-select__arrow">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="240"
@@ -415,7 +376,7 @@
                   </label>
                 </div>
 
-                <div class="auth-form__row">
+                <div style="justify-content: start" class="auth-form__row">
                   <label
                     for="agree"
                     id="auth-form-agree"
@@ -427,12 +388,13 @@
                       name="agree"
                       value="agree"
                     />
-
-                    <span class="base-checkbox__content">
-                      Jag godkänner
-                      <a href="#" class="" target="_blank"> användarvillkor </a>
-                    </span>
                   </label>
+                  <span class="base-checkbox__content">
+                    Jag godkänner
+                    <a href="./arrangement.html" class="" target="_blank">
+                      användarvillkoren.
+                    </a>
+                  </span>
                 </div>
 
                 <button

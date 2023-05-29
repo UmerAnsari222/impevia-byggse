@@ -1882,6 +1882,10 @@ button.change-locale__btn {
   transform: rotate(180deg);
 }
 
+.base-select._close .base-select__arrow {
+  transform: rotate(0deg);
+}
+
 .base-select__preloader {
   flex-shrink: 0;
   width: 20px;

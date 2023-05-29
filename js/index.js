@@ -118,6 +118,33 @@ document.getElementById("telefon").addEventListener("input", () => {
   checkAllPageAuth();
 });
 
+document.querySelector("#plats-button").addEventListener("click", () => {
+  document.querySelector("#plats-select").classList.toggle("_open");
+  isCheck = true;
+  let baseSelect = document.querySelector("#plats-select-item");
+  if (baseSelect.style.display == "none") {
+    document.querySelector("#plats-select-dropdown").innerHTML = "";
+
+    palatsOption.forEach((option) => {
+      let div = document.createElement("div");
+      div.setAttribute("class", "base-select__option");
+      div.classList.add("base-select__option-plats-click");
+      div.innerText = option;
+      document
+        .querySelector("#plats-select-dropdown")
+        .insertAdjacentElement("beforeend", div);
+    });
+    baseSelect.style.display = "block";
+    selectedDropdownItemJar = document.querySelectorAll(
+      ".base-select__option-plats-click"
+    );
+    selectPlats(selectedDropdownItemJar);
+  } else {
+    document.querySelector("#plats-select-dropdown").innerHTML = "";
+    baseSelect.style.display = "none";
+  }
+});
+
 document.querySelector("#Jag-ar-button").addEventListener("click", () => {
   document.querySelector("#Jag-ar-select").classList.toggle("_open");
   isCheck = true;
@@ -141,33 +168,6 @@ document.querySelector("#Jag-ar-button").addEventListener("click", () => {
     selectJar(selectedDropdownItemJar);
   } else {
     document.querySelector("#Jag-ar-select-dropdown").innerHTML = "";
-    baseSelect.style.display = "none";
-  }
-});
-
-document.querySelector("#plats-button").addEventListener("click", () => {
-  document.querySelector("#plats-select").classList.toggle("_open");
-  isCheck = true;
-  let baseSelect = document.querySelector("#plats-select-item");
-  if (baseSelect.style.display == "none") {
-    document.querySelector("#plats-select-dropdown").innerHTML = "";
-
-    palatsOption.forEach((option) => {
-      let div = document.createElement("div");
-      div.setAttribute("class", "base-select__option");
-      div.classList.add("class", "base-select__option-plats-click");
-      div.innerText = option;
-      document
-        .querySelector("#plats-select-dropdown")
-        .insertAdjacentElement("beforeend", div);
-    });
-    baseSelect.style.display = "block";
-    selectedDropdownItemJar = document.querySelectorAll(
-      ".base-select__option-plats-click"
-    );
-    selectPlats(selectedDropdownItemJar);
-  } else {
-    document.querySelector("#plats-select-dropdown").innerHTML = "";
     baseSelect.style.display = "none";
   }
 });
@@ -206,11 +206,13 @@ document.querySelector("#auth-button").addEventListener("click", () => {
 
 function selectPlats(list) {
   list.forEach((select) => {
-    select.addEventListener("click", () => {
+    select.addEventListener("click", (event) => {
+      console.log(event);
       document.querySelector("#base-select__value__plats").innerText =
         select.textContent;
-      document.querySelector("#plats-select").classList.remove("_open");
-      let baseSelect = document.querySelector("#plats-select-item");
+
+      // document.querySelector("#plats-select").classList.remove("_open");
+      let baseSelect = document.querySelector("#plats-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
     });
@@ -222,8 +224,8 @@ function selectOnskar(list) {
     select.addEventListener("click", () => {
       document.querySelector("#base-select__value__onskar").innerText =
         select.textContent;
-      document.querySelector("#onskar-select").classList.remove("_open");
-      let baseSelect = document.querySelector("#onskar-select-item");
+      // document.querySelector("#onskar-select").classList.replace("_open", "");
+      let baseSelect = document.querySelector("#onskar-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
     });
@@ -235,8 +237,8 @@ function selectJar(list) {
     select.addEventListener("click", () => {
       document.querySelector("#base-select__value__jar").innerText =
         select.textContent;
-      document.querySelector("#Jag-ar-select").classList.remove("_open");
-      let baseSelect = document.querySelector("#Jag-ar-select-item");
+      // document.querySelector("#Jag-ar-select").classList.replace("_open", "");
+      let baseSelect = document.querySelector("#Jag-ar-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
     });
