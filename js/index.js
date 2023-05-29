@@ -11,26 +11,6 @@ let selectedDropdownItemJar = document.querySelectorAll(
   ".base-select__option-jar-at-click"
 );
 
-// let onskatStartdatumOption = [
-//   "Snarast möjligt",
-//   "Inom 1 månad",
-//   "Inom 3 månader",
-//   "Inom 6 månader",
-//   "Inom 12 månader",
-//   "Ingen betydelse",
-// ];
-
-let onskatStartdatumOption = [
-  "Badrumsrenovering",
-  "Köksrenovering",
-  "Tvättstuga",
-  "Toalett",
-  "Totalrenovering",
-  "Tillbyggnad",
-  "Annat",
-];
-
-// let JagArOption = ["Privatperson", "Företag", "Bostadsrättsförening"];
 let JagArOption = [
   "Lägenhet",
   "Villa",
@@ -81,7 +61,6 @@ let palatsOption = [
 let questionIndex = 0;
 
 document.getElementById("next-stage-button")?.addEventListener("click", () => {
-  console.log("Hello World");
   document.querySelector("#beskriv-section").style.display = "none";
   document.querySelector(".auth-registration-page").style.display = "block";
 });
@@ -264,8 +243,6 @@ function selectOnskat(list) {
 }
 
 document.getElementById("select-file").addEventListener("input", () => {
-  // console.log(document.getElementById("select-file").files[0]);
-  // file-preview__file-img
   var src = URL.createObjectURL(
     document.getElementById("select-file").files[0]
   );

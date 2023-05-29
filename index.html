@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/app.css" />
-    <!-- <link rel="stylesheet" href="./css/chunck.css" /> -->
     <link rel="stylesheet" href="./css/home.css" />
     <title>Document</title>
   </head>
@@ -21,29 +20,26 @@
 
         <div class="the-header__top">
           <div class="the-header__top-content">
-            <div class="logo the-header__logo">
+            <div style="display: none" class="logo the-header__logo">
               <img
                 style="height: 30px"
                 src="./img/060E6398-9339-4E3A-8EE7-7D9B78F307E9.png"
                 alt=""
               />
             </div>
-            <!---->
           </div>
         </div>
         <div class="the-header__middle container-inner">
           <div class="the-header__middle-content">
-            <!---->
             <div class="logo the-header__logo centered">
               <img
-                style="height: 30px"
+                style="height: 40px"
                 src="./img/060E6398-9339-4E3A-8EE7-7D9B78F307E9.png"
                 alt=""
               />
             </div>
           </div>
         </div>
-        <!---->
       </header>
 
       <main class="app__main">
@@ -73,7 +69,6 @@
                     class="base-select create-project-description__input _shadow _large"
                   >
                     <span class="base-input__label"> Plats </span>
-                    <!-- <span class="base-input__label"> Önskat startdatum </span> -->
 
                     <div id="plats-button" class="base-select__select">
                       <div class="base-select__container">
@@ -106,8 +101,6 @@
                         ></div>
                       </div>
                     </div>
-
-                    <!---->
                   </div>
 
                   <div
@@ -122,7 +115,6 @@
                           id="base-select__value__jar"
                           class="base-select__value"
                         ></div>
-                        <!----><!---->
                         <div class="base-select__arrow">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -148,8 +140,6 @@
                         ></div>
                       </div>
                     </div>
-
-                    <!---->
                   </div>
                 </div>
 
@@ -175,7 +165,6 @@
                     <span class="base-input__label"
                       >När önskar du att få hjälp?</span
                     >
-                    <!-- <span class="base-input__label"> Jag är... </span> -->
 
                     <div id="onskar-button" class="base-select__select">
                       <div class="base-select__container">
@@ -208,43 +197,8 @@
                         ></div>
                       </div>
                     </div>
-
-                    <!---->
                   </div>
                 </div>
-
-                <!-- <label
-                  class="base-input create-project-description__input _shadow"
-                >
-                  <span class="base-input__label"> Projektets namn </span>
-                  <input
-                    id="projektets"
-                    type="text"
-                    id="projektets"
-                    class="base-input__input"
-                  />
-                </label>
-
-                <label
-                  class="base-input create-project-description__input _shadow"
-                >
-                  <span class="base-input__label"> Namn </span>
-                  <input id="namn" type="text" class="base-input__input" />
-                </label>
-
-                <label
-                  class="base-input create-project-description__input _shadow"
-                >
-                  <span class="base-input__label"> E-post </span>
-                  <input id="epost" type="text" class="base-input__input" />
-                </label>
-
-                <label
-                  class="base-input create-project-description__input _shadow"
-                >
-                  <span class="base-input__label"> Telefon </span>
-                  <input id="telefon" type="text" class="base-input__input" />
-                </label> -->
 
                 <h3 class="create-project-description__section-title">
                   Bifoga filer ( Valfritt )
@@ -267,12 +221,6 @@
                     class="files-drop-upload__dropzone"
                   >
                     <div class="files-drop-upload__dropzone-content">
-                      <!-- <div class="files-drop-upload__dropzone-title">
-                        Släpp dina filer här
-                      </div>
-                      <div class="files-drop-upload__dropzone-separator">
-                        <span>eller</span>
-                      </div> -->
                       <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
                       <svg
                         height="40px"
@@ -314,8 +262,6 @@
                   <div class="files-drop-upload__files"></div>
                 </div>
 
-                <!---->
-                <!-- <div class="create-project__footer"> -->
                 <div class="button-group-wrapper">
                   <button
                     id="next-stage-button"
@@ -325,7 +271,6 @@
                     NÄSTA STEG
                   </button>
                 </div>
-                <!-- </div> -->
               </div>
             </div>
           </div>
@@ -422,63 +367,6 @@
               </p>
 
               <div class="auth-registration-page__form auth-form">
-                <!-- <div class="auth-form__row">
-                  <label class="base-input auth-form__input" name="name">
-                    <span class="base-input__label"> Namn </span>
-                    <input
-                      id="namn"
-                      type="text"
-                      name="name"
-                      class="base-input__input"
-                    />
-                  </label>
-                  <label class="base-input auth-form__input" name="surname">
-                    <span class="base-input__label"> E-post </span>
-                    <input
-                      id="efternamn"
-                      type="text"
-                      name="surname"
-                      class="base-input__input"
-                    />
-                  </label>
-                </div>
-
-                <div class="auth-form__row">
-                  <label
-                    class="base-input auth-form__input"
-                    type="tel"
-                    name="phone"
-                  >
-                    <span class="base-input__label"> Telefon </span>
-                    <input
-                      id="telefon"
-                      type="tel"
-                      name="phone"
-                      class="base-input__input"
-                    />
-                  </label>
-                </div>
-
-                <div class="auth-form__row">
-                  <label
-                    for="agree"
-                    id="auth-form-agree"
-                    class="base-checkbox auth-form__agree"
-                  >
-                    <input
-                      type="checkbox"
-                      id="agree"
-                      name="agree"
-                      value="agree"
-                    />
-
-                    <span class="base-checkbox__content">
-                      Jag godkänner
-                      <a href="#" class="" target="_blank"> användarvillkor </a>
-                    </span>
-                  </label>
-                </div> -->
-
                 <a
                   href="https://renoveringsoffert.se"
                   class="auth-form__btn btn"
