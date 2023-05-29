@@ -881,12 +881,12 @@ textarea {
 
 @media screen and (max-width: 500px) {
   .the-header {
-    min-height: 280px !important;
+    min-height: 200px !important;
   }
 
   .the-header__logo img {
     display: none;
-    height: 20px !important;
+    height: 25px !important;
     margin-left: -20px;
   }
   .the-header__logo.centered img {
