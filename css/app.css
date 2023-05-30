@@ -884,11 +884,11 @@ textarea {
     min-height: 280px !important;
   }
 
-  /* .the-header__logo img {
+  .the-header__logo img {
     display: none;
     height: 25px !important;
     margin-left: -20px;
-  } */
+  }
   .the-header__logo.centered img {
     height: 30px !important;
     margin-left: -20px;
