@@ -40,6 +40,8 @@ let onskarOption = [
   "Inom 12 månader",
 ];
 
+let representerarOption = ["Privatperson", "Företag", "Förening", "Myndighet"];
+
 let palatsOption = [
   "Blekinge",
   "Dalarna",
@@ -188,6 +190,37 @@ document.querySelector("#Jag-ar-button").addEventListener("click", () => {
   }
 });
 
+document
+  .querySelector("#representerar-button")
+  .addEventListener("click", () => {
+    document.querySelector("#representerar-select").classList.toggle("_open");
+    isCheck = true;
+    let baseSelect = document.querySelector("#representerar-select-item");
+    if (baseSelect.style.display == "none") {
+      document.querySelector("#representerar-select-dropdown").innerHTML = "";
+
+      representerarOption.forEach((option) => {
+        let div = document.createElement("div");
+        div.setAttribute("class", "base-select__option");
+        div.classList.add("class", "base-select__option-representerar-click");
+        div.innerText = option;
+        document
+          .querySelector("#representerar-select-dropdown")
+          .insertAdjacentElement("beforeend", div);
+      });
+      document.querySelector("#representerar-select-dropdown").style.display =
+        "block";
+      baseSelect.style.display = "block";
+      selectedDropdownItemJar = document.querySelectorAll(
+        ".base-select__option-representerar-click"
+      );
+      selectRepresenterar(selectedDropdownItemJar);
+    } else {
+      document.querySelector("#representerar-select-dropdown").innerHTML = "";
+      baseSelect.style.display = "none";
+    }
+  });
+
 document.querySelector("#onskar-button").addEventListener("click", () => {
   document.querySelector("#onskar-select").classList.toggle("_open");
   isCheck = true;
@@ -257,6 +290,19 @@ function selectJar(list) {
         select.textContent;
       // document.querySelector("#Jag-ar-select").classList.replace("_open", "");
       let baseSelect = document.querySelector("#Jag-ar-select-dropdown");
+      baseSelect.style.display = "none";
+      checkAll();
+    });
+  });
+}
+
+function selectRepresenterar(list) {
+  list.forEach((select) => {
+    select.addEventListener("click", () => {
+      document.querySelector("#base-select__value__representerar").innerText =
+        select.textContent;
+      // document.querySelector("#Jag-ar-select").classList.replace("_open", "");
+      let baseSelect = document.querySelector("#representerar-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
     });
