@@ -875,9 +875,9 @@ textarea {
   /* height: 50px; */
 }
 
-/* .the-header__logo.centered img {
+.the-header__logo.centered img {
   display: none;
-} */
+}
 
 @media screen and (max-width: 500px) {
   .the-header {
