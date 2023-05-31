@@ -21,8 +21,10 @@ let selectedDropdownItemJar = document.querySelectorAll(
 //   "Annat",
 // ];
 let JagArOption = [
-  "Skapa ny hemsida",
-  "Utveckling av befintlig hemsida",
+  // "Skapa ny hemsida",
+  "Ny hemsida",
+  "Befintlig hemsida",
+  // "Utveckling av befintlig hemsida",
   "Sökoptimering",
   "Webbutveckling",
   "Webbdesign",
