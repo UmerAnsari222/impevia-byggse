@@ -14,9 +14,10 @@ let selectedDropdownItemJar = document.querySelectorAll(
 let JagArOption = [
   "Ny hemsida",
   "Befintlig hemsida",
-  "E-handel",
+  "Sökoptimering",
   "Webbutveckling",
-  "Webbdesign",
+  "E-handel",
+  // "Webbdesign",
   "Marknadsföring",
   "Systemutveckling",
   "Apputveckling",
