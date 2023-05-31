@@ -372,8 +372,8 @@ function checkAll() {
     document.getElementById("beskrivning").value.trim() != "" &&
     document.getElementById("base-select__value__onskar").textContent.trim() !=
       "" &&
-    document.getElementById("base-select__value__plats").textContent.trim() !=
-      "" &&
+    // document.getElementById("base-select__value__plats").textContent.trim() !=
+    //   "" &&
     document.getElementById("base-select__value__jar").textContent.trim() != ""
     //   &&
     // document.querySelector(".files-drop-upload__files").childNodes.length > 1
