@@ -136,34 +136,34 @@ document.getElementById("telefon").addEventListener("input", () => {
   checkAllPageAuth();
 });
 
-document.querySelector("#plats-button").addEventListener("click", () => {
-  document.querySelector("#plats-select").classList.toggle("_open");
-  isCheck = true;
-  let baseSelect = document.querySelector("#plats-select-item");
-  if (baseSelect.style.display == "none") {
-    console.log("Hello dnv,snd,vns,dnv,sndv,sn,v");
-    document.querySelector("#plats-select-dropdown").innerHTML = "";
+// document.querySelector("#plats-button").addEventListener("click", () => {
+//   document.querySelector("#plats-select").classList.toggle("_open");
+//   isCheck = true;
+//   let baseSelect = document.querySelector("#plats-select-item");
+//   if (baseSelect.style.display == "none") {
+//     console.log("Hello dnv,snd,vns,dnv,sndv,sn,v");
+//     document.querySelector("#plats-select-dropdown").innerHTML = "";
 
-    palatsOption.forEach((option) => {
-      let div = document.createElement("div");
-      div.setAttribute("class", "base-select__option");
-      div.classList.add("base-select__option-plats-click");
-      div.innerText = option;
-      document
-        .querySelector("#plats-select-dropdown")
-        .insertAdjacentElement("beforeend", div);
-    });
-    document.querySelector("#plats-select-dropdown").style.display = "block";
-    baseSelect.style.display = "block";
-    selectedDropdownItemJar = document.querySelectorAll(
-      ".base-select__option-plats-click"
-    );
-    selectPlats(selectedDropdownItemJar);
-  } else {
-    document.querySelector("#plats-select-dropdown").innerHTML = "";
-    baseSelect.style.display = "none";
-  }
-});
+//     palatsOption.forEach((option) => {
+//       let div = document.createElement("div");
+//       div.setAttribute("class", "base-select__option");
+//       div.classList.add("base-select__option-plats-click");
+//       div.innerText = option;
+//       document
+//         .querySelector("#plats-select-dropdown")
+//         .insertAdjacentElement("beforeend", div);
+//     });
+//     document.querySelector("#plats-select-dropdown").style.display = "block";
+//     baseSelect.style.display = "block";
+//     selectedDropdownItemJar = document.querySelectorAll(
+//       ".base-select__option-plats-click"
+//     );
+//     selectPlats(selectedDropdownItemJar);
+//   } else {
+//     document.querySelector("#plats-select-dropdown").innerHTML = "";
+//     baseSelect.style.display = "none";
+//   }
+// });
 
 document.querySelector("#Jag-ar-button").addEventListener("click", () => {
   document.querySelector("#Jag-ar-select").classList.toggle("_open");
