@@ -37,7 +37,8 @@ let JagArOption = [
 
 let onskarOption = [
   "Snarast",
-  "Inom 3 månader",
+  "Inom 2 månader",
+  // "Inom 3 månader",
   "Inom 6 månader",
   "Inom 12 månader",
 ];
