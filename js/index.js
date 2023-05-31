@@ -11,20 +11,9 @@ let selectedDropdownItemJar = document.querySelectorAll(
   ".base-select__option-jar-at-click"
 );
 
-// let JagArOption = [
-//   "Lägenhet",
-//   "Villa",
-//   "Radhus",
-//   "Fritidshus",
-//   "Affärslokal",
-//   "BRF",
-//   "Annat",
-// ];
 let JagArOption = [
-  // "Skapa ny hemsida",
   "Ny hemsida",
   "Befintlig hemsida",
-  // "Utveckling av befintlig hemsida",
   "Sökoptimering",
   "Webbutveckling",
   "Webbdesign",
@@ -38,7 +27,6 @@ let JagArOption = [
 let onskarOption = [
   "Snarast",
   "Inom 2 månader",
-  // "Inom 3 månader",
   "Inom 6 månader",
   "Inom 12 månader",
 ];
@@ -67,35 +55,6 @@ let palatsOption = [
   "Örebro",
   "Östergötland",
 ];
-// let palatsOption = [
-//   "Botkyrka",
-//   "Danderyd",
-//   "Ekerö",
-//   "Haninge",
-//   "Huddinge",
-//   "Järfälla",
-//   "Lidingö",
-//   "Nacka",
-//   "Norrtälje",
-//   "Nykvarn",
-//   "Nynäshamn",
-//   "Salem",
-//   "Sigtuna",
-//   "Sollentuna",
-//   "Solna",
-//   "Stockholm  Stad",
-//   "Sundbyberg",
-//   "Södertälje",
-//   "Tyresö",
-//   "Tyresö",
-//   "Täby",
-//   "Upplands-Bro",
-//   "Upplands Väsby",
-//   "Vallentuna",
-//   "Vaxholm",
-//   "Värmdö",
-//   "Österåker",
-// ];
 
 let questionIndex = 0;
 
@@ -117,7 +76,6 @@ checkBox?.addEventListener("click", (event) => {
     isAuthAgree = true;
     checkAllPageAuth();
   }
-  // checkBox.classList.add("_checked");
 });
 
 document.getElementById("beskrivning").addEventListener("input", () => {
@@ -135,35 +93,6 @@ document.getElementById("efternamn").addEventListener("input", () => {
 document.getElementById("telefon").addEventListener("input", () => {
   checkAllPageAuth();
 });
-
-// document.querySelector("#plats-button").addEventListener("click", () => {
-//   document.querySelector("#plats-select").classList.toggle("_open");
-//   isCheck = true;
-//   let baseSelect = document.querySelector("#plats-select-item");
-//   if (baseSelect.style.display == "none") {
-//     console.log("Hello dnv,snd,vns,dnv,sndv,sn,v");
-//     document.querySelector("#plats-select-dropdown").innerHTML = "";
-
-//     palatsOption.forEach((option) => {
-//       let div = document.createElement("div");
-//       div.setAttribute("class", "base-select__option");
-//       div.classList.add("base-select__option-plats-click");
-//       div.innerText = option;
-//       document
-//         .querySelector("#plats-select-dropdown")
-//         .insertAdjacentElement("beforeend", div);
-//     });
-//     document.querySelector("#plats-select-dropdown").style.display = "block";
-//     baseSelect.style.display = "block";
-//     selectedDropdownItemJar = document.querySelectorAll(
-//       ".base-select__option-plats-click"
-//     );
-//     selectPlats(selectedDropdownItemJar);
-//   } else {
-//     document.querySelector("#plats-select-dropdown").innerHTML = "";
-//     baseSelect.style.display = "none";
-//   }
-// });
 
 document.querySelector("#Jag-ar-button").addEventListener("click", () => {
   document.querySelector("#Jag-ar-select").classList.toggle("_open");
@@ -263,9 +192,6 @@ function selectPlats(list) {
       console.log(event);
       document.querySelector("#base-select__value__plats").innerText =
         select.textContent;
-
-      // document.querySelector("#plats-select").classList.remove("_open");
-      // document.querySelector("#plats-select-item").style.display = "none";
       let baseSelect = document.querySelector("#plats-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
@@ -278,7 +204,6 @@ function selectOnskar(list) {
     select.addEventListener("click", () => {
       document.querySelector("#base-select__value__onskar").innerText =
         select.textContent;
-      // document.querySelector("#onskar-select").classList.replace("_open", "");
       let baseSelect = document.querySelector("#onskar-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
@@ -291,7 +216,7 @@ function selectJar(list) {
     select.addEventListener("click", () => {
       document.querySelector("#base-select__value__jar").innerText =
         select.textContent;
-      // document.querySelector("#Jag-ar-select").classList.replace("_open", "");
+
       let baseSelect = document.querySelector("#Jag-ar-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
@@ -304,7 +229,6 @@ function selectRepresenterar(list) {
     select.addEventListener("click", () => {
       document.querySelector("#base-select__value__representerar").innerText =
         select.textContent;
-      // document.querySelector("#Jag-ar-select").classList.replace("_open", "");
       let baseSelect = document.querySelector("#representerar-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
@@ -364,21 +288,12 @@ function handleClick(params) {
 }
 
 function checkAll() {
-  // console.log(
-  //   document.querySelector(".files-drop-upload__files").childNodes.length
-  // );
-  // console.log(document.querySelector(".files-drop-upload__files").childNodes);
   if (
     document.getElementById("beskrivning").value.trim() != "" &&
-    document.getElementById("base-select__value__onskar").textContent.trim() !=
-      "" &&
-    // document.getElementById("base-select__value__plats").textContent.trim() !=
-    //   "" &&
-    document.getElementById("base-select__value__jar").textContent.trim() != ""
-    //   &&
-    // document.querySelector(".files-drop-upload__files").childNodes.length > 1
+    (document.getElementById("base-select__value__onskar").textContent.trim() !=
+      document.getElementById("base-select__value__jar").textContent.trim()) !=
+      ""
   ) {
-    console.log(true);
     document.getElementById("next-stage-button").removeAttribute("disabled");
 
     return true;
@@ -393,12 +308,10 @@ function checkAll() {
 function checkAllPageAuth() {
   if (
     document.getElementById("telefon").value.trim() != "" &&
-    // document.getElementById("mejl").value.trim() != "" &&
     document.getElementById("efternamn").value.trim() != "" &&
     checkBox.classList.contains("_checked") != "" &&
     document.getElementById("namn").value.trim() != ""
   ) {
-    console.log(true);
     document.querySelector("#auth-button").removeAttribute("disabled");
     return true;
   } else {
