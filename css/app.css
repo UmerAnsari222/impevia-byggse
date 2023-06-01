@@ -884,6 +884,10 @@ textarea {
     min-height: 280px !important;
   }
 
+  #representerar-select {
+    width: 100% !important;
+  }
+
   /* .the-header__logo img {
     display: none;
     height: 25px !important;
