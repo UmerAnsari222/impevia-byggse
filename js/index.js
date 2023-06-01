@@ -12,50 +12,49 @@ let selectedDropdownItemJar = document.querySelectorAll(
 );
 
 let JagArOption = [
-  "Lägenhet",
-  "Villa",
-  "Radhus",
-  "Fritidshus",
-  "Affärslokal",
-  "BRF",
-  "Annat",
+  "Ny hemsida",
+  "Befintlig hemsida",
+  "Sökoptimering",
+  "Webbutveckling",
+  "E-handel",
+  // "Webbdesign",
+  "Marknadsföring",
+  "Systemutveckling",
+  "Apputveckling",
+  "Grafisk design",
+  "IT-förfågan",
 ];
 
 let onskarOption = [
   "Snarast",
-  "Inom 3 månader",
+  "Inom 2 månader",
   "Inom 6 månader",
   "Inom 12 månader",
 ];
 
+let representerarOption = ["Privatperson", "Företag", "Förening", "Myndighet"];
+
 let palatsOption = [
-  "Botkyrka",
-  "Danderyd",
-  "Ekerö",
-  "Haninge",
-  "Huddinge",
-  "Järfälla",
-  "Lidingö",
-  "Nacka",
-  "Norrtälje",
-  "Nykvarn",
-  "Nynäshamn",
-  "Salem",
-  "Sigtuna",
-  "Sollentuna",
-  "Solna",
-  "Stockholm  Stad",
-  "Sundbyberg",
-  "Södertälje",
-  "Tyresö",
-  "Tyresö",
-  "Täby",
-  "Upplands-Bro",
-  "Upplands Väsby",
-  "Vallentuna",
-  "Vaxholm",
-  "Värmdö",
-  "Österåker",
+  "Blekinge",
+  "Dalarna",
+  "Gotland",
+  "Gävleborg",
+  "Göteborg",
+  "Halland",
+  "Jämtland",
+  "Jönköping",
+  "Kalmar",
+  "Kronoberg",
+  "Skaraborg",
+  "Skåne",
+  "Stockholm",
+  "Södermanland",
+  "Uppsala",
+  "Värmland",
+  "Västerbotten",
+  "Älvsborg",
+  "Örebro",
+  "Östergötland",
 ];
 
 let questionIndex = 0;
@@ -78,7 +77,6 @@ checkBox?.addEventListener("click", (event) => {
     isAuthAgree = true;
     checkAllPageAuth();
   }
-  // checkBox.classList.add("_checked");
 });
 
 document.getElementById("beskrivning").addEventListener("input", () => {
@@ -95,35 +93,6 @@ document.getElementById("efternamn").addEventListener("input", () => {
 
 document.getElementById("telefon").addEventListener("input", () => {
   checkAllPageAuth();
-});
-
-document.querySelector("#plats-button").addEventListener("click", () => {
-  document.querySelector("#plats-select").classList.toggle("_open");
-  isCheck = true;
-  let baseSelect = document.querySelector("#plats-select-item");
-  if (baseSelect.style.display == "none") {
-    console.log("Hello dnv,snd,vns,dnv,sndv,sn,v");
-    document.querySelector("#plats-select-dropdown").innerHTML = "";
-
-    palatsOption.forEach((option) => {
-      let div = document.createElement("div");
-      div.setAttribute("class", "base-select__option");
-      div.classList.add("base-select__option-plats-click");
-      div.innerText = option;
-      document
-        .querySelector("#plats-select-dropdown")
-        .insertAdjacentElement("beforeend", div);
-    });
-    document.querySelector("#plats-select-dropdown").style.display = "block";
-    baseSelect.style.display = "block";
-    selectedDropdownItemJar = document.querySelectorAll(
-      ".base-select__option-plats-click"
-    );
-    selectPlats(selectedDropdownItemJar);
-  } else {
-    document.querySelector("#plats-select-dropdown").innerHTML = "";
-    baseSelect.style.display = "none";
-  }
 });
 
 document.querySelector("#Jag-ar-button").addEventListener("click", () => {
@@ -153,6 +122,37 @@ document.querySelector("#Jag-ar-button").addEventListener("click", () => {
     baseSelect.style.display = "none";
   }
 });
+
+document
+  .querySelector("#representerar-button")
+  .addEventListener("click", () => {
+    document.querySelector("#representerar-select").classList.toggle("_open");
+    isCheck = true;
+    let baseSelect = document.querySelector("#representerar-select-item");
+    if (baseSelect.style.display == "none") {
+      document.querySelector("#representerar-select-dropdown").innerHTML = "";
+
+      representerarOption.forEach((option) => {
+        let div = document.createElement("div");
+        div.setAttribute("class", "base-select__option");
+        div.classList.add("class", "base-select__option-representerar-click");
+        div.innerText = option;
+        document
+          .querySelector("#representerar-select-dropdown")
+          .insertAdjacentElement("beforeend", div);
+      });
+      document.querySelector("#representerar-select-dropdown").style.display =
+        "block";
+      baseSelect.style.display = "block";
+      selectedDropdownItemJar = document.querySelectorAll(
+        ".base-select__option-representerar-click"
+      );
+      selectRepresenterar(selectedDropdownItemJar);
+    } else {
+      document.querySelector("#representerar-select-dropdown").innerHTML = "";
+      baseSelect.style.display = "none";
+    }
+  });
 
 document.querySelector("#onskar-button").addEventListener("click", () => {
   document.querySelector("#onskar-select").classList.toggle("_open");
@@ -193,9 +193,6 @@ function selectPlats(list) {
       console.log(event);
       document.querySelector("#base-select__value__plats").innerText =
         select.textContent;
-
-      // document.querySelector("#plats-select").classList.remove("_open");
-      // document.querySelector("#plats-select-item").style.display = "none";
       let baseSelect = document.querySelector("#plats-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
@@ -208,7 +205,6 @@ function selectOnskar(list) {
     select.addEventListener("click", () => {
       document.querySelector("#base-select__value__onskar").innerText =
         select.textContent;
-      // document.querySelector("#onskar-select").classList.replace("_open", "");
       let baseSelect = document.querySelector("#onskar-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
@@ -221,8 +217,20 @@ function selectJar(list) {
     select.addEventListener("click", () => {
       document.querySelector("#base-select__value__jar").innerText =
         select.textContent;
-      // document.querySelector("#Jag-ar-select").classList.replace("_open", "");
+
       let baseSelect = document.querySelector("#Jag-ar-select-dropdown");
+      baseSelect.style.display = "none";
+      checkAll();
+    });
+  });
+}
+
+function selectRepresenterar(list) {
+  list.forEach((select) => {
+    select.addEventListener("click", () => {
+      document.querySelector("#base-select__value__representerar").innerText =
+        select.textContent;
+      let baseSelect = document.querySelector("#representerar-select-dropdown");
       baseSelect.style.display = "none";
       checkAll();
     });
@@ -281,21 +289,12 @@ function handleClick(params) {
 }
 
 function checkAll() {
-  // console.log(
-  //   document.querySelector(".files-drop-upload__files").childNodes.length
-  // );
-  // console.log(document.querySelector(".files-drop-upload__files").childNodes);
   if (
     document.getElementById("beskrivning").value.trim() != "" &&
-    document.getElementById("base-select__value__onskar").textContent.trim() !=
-      "" &&
-    document.getElementById("base-select__value__plats").textContent.trim() !=
-      "" &&
-    document.getElementById("base-select__value__jar").textContent.trim() != ""
-    //   &&
-    // document.querySelector(".files-drop-upload__files").childNodes.length > 1
+    (document.getElementById("base-select__value__onskar").textContent.trim() !=
+      document.getElementById("base-select__value__jar").textContent.trim()) !=
+      ""
   ) {
-    console.log(true);
     document.getElementById("next-stage-button").removeAttribute("disabled");
 
     return true;
@@ -310,12 +309,10 @@ function checkAll() {
 function checkAllPageAuth() {
   if (
     document.getElementById("telefon").value.trim() != "" &&
-    // document.getElementById("mejl").value.trim() != "" &&
     document.getElementById("efternamn").value.trim() != "" &&
     checkBox.classList.contains("_checked") != "" &&
     document.getElementById("namn").value.trim() != ""
   ) {
-    console.log(true);
     document.querySelector("#auth-button").removeAttribute("disabled");
     return true;
   } else {

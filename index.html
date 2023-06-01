@@ -13,28 +13,17 @@
       <header class="the-header container app__header">
         <img
           class="the-header__bg-picture"
-          src="./img/E4121322-4B05-489E-8FC0-28F6BC6781BD.jpeg"
+          src="./img/1077E191-49F8-45FF-9AF8-461206D96D6E.jpeg"
           alt=""
-          style="object-position: center top; object-fit: cover"
+          style="object-position: top top; object-fit: cover"
         />
 
         <div class="the-header__top">
           <div class="the-header__top-content">
-            <div style="display: none" class="logo the-header__logo">
+            <div class="logo the-header__logo">
               <img
                 style="height: 30px"
-                src="./img/060E6398-9339-4E3A-8EE7-7D9B78F307E9.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div class="the-header__middle container-inner">
-          <div class="the-header__middle-content">
-            <div class="logo the-header__logo centered">
-              <img
-                style="height: 40px"
-                src="./img/Renoveringsoffert.se Logga.svg"
+                src="./img/Itofferter logga.svg"
                 alt=""
               />
             </div>
@@ -54,60 +43,23 @@
                 class="create-project-description create-project__step _description"
               >
                 <h2 class="create-project-description__title">
-                  Beskriv projektet
+                  Beskriv uppdraget
                 </h2>
 
                 <p class="create-project-description__description">
-                  Ge en ingående beskrivning av ditt projekt så att hantverkaren
+                  Ge en ingående beskrivning av ditt uppdrag så att webbyrån
                   enkelt kan lämna en offert som är anpassad efter ditt
                   projektkrav.
                 </p>
 
                 <div class="create-project-description__row">
                   <div
-                    id="plats-select"
-                    class="base-select create-project-description__input _shadow _large"
-                  >
-                    <span class="base-input__label"> Plats </span>
-
-                    <div id="plats-button" class="base-select__select">
-                      <div class="base-select__container">
-                        <div
-                          id="base-select__value__plats"
-                          class="base-select__value"
-                        ></div>
-                        <div class="base-select__arrow">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="240"
-                            height="240"
-                            viewBox="0 0 24 24"
-                            style="fill: rgba(0, 0, 0, 1)"
-                          >
-                            <path
-                              d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
-                            ></path>
-                          </svg>
-                        </div>
-                      </div>
-                      <div
-                        style="display: none"
-                        id="plats-select-item"
-                        class="base-select__dropdown-wrap"
-                      >
-                        <div
-                          id="plats-select-dropdown"
-                          class="base-select__dropdown"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
                     id="Jag-ar-select"
                     class="base-select create-project-description__input _shadow _large"
                   >
-                    <span class="base-input__label"> Typ av bostad? </span>
+                    <span class="base-input__label">
+                      Vilken tjänst gäller det?
+                    </span>
 
                     <div id="Jag-ar-button" class="base-select__select">
                       <div class="base-select__container">
@@ -146,14 +98,14 @@
                 <label
                   class="base-input create-project-description__input _shadow"
                 >
-                  <span class="base-input__label"> Beskriv uppdraget </span>
+                  <span class="base-input__label"> Beskrivning </span>
 
                   <textarea
                     cols="30"
                     rows="10"
                     id="beskrivning"
                     class="base-input__input"
-                    placeholder="Beskriv projektet i detalj för att underlätta offertlämningen från hantverkaren."
+                    placeholder="Beskriv uppdraget i detalj för att underlätta offertlämningen från webbyrån."
                   ></textarea>
                 </label>
 
@@ -162,9 +114,9 @@
                     id="onskar-select"
                     class="base-select create-project-description__input _shadow _large"
                   >
-                    <span class="base-input__label"
-                      >När önskar du att få hjälp?</span
-                    >
+                    <span class="base-input__label">
+                      När ska uppdraget vara klart?
+                    </span>
 
                     <div id="onskar-button" class="base-select__select">
                       <div class="base-select__container">
@@ -205,8 +157,8 @@
                 </h3>
 
                 <p class="create-project-description__section-description">
-                  Här kan du ladda upp bilder dokument eller ritningar för att
-                  ge hantverkaren en klar bild av ditt projekt.
+                  Här kan du ladda upp bilder och dokument för att ge webbyrån
+                  en klar bild av ditt projekt.
                 </p>
 
                 <div
@@ -279,8 +231,7 @@
             <div class="auth-registration-page__content container-inner">
               <h2 class="auth-registration-page__title">Skapa förfrågan</h2>
               <p class="auth-registration-page__description">
-                Jämför offerter kostnadsfritt få svar av upp till fem
-                renoveringsföretag.
+                Jämför offerter kostnadsfritt få svar av upp till fem webbyråer.
               </p>
 
               <div class="auth-registration-page__form auth-form">
@@ -319,6 +270,57 @@
                       class="base-input__input"
                     />
                   </label>
+                </div>
+
+                <div class="create-project-description__row">
+                  <div
+                    id="representerar-select"
+                    class="base-select create-project-description__input _shadow _large"
+                  >
+                    <span class="base-input__label">
+                      Vem representerar du?
+                    </span>
+
+                    <div id="representerar-button" class="base-select__select">
+                      <div
+                        style="
+                          background-color: transparent;
+                          box-shadow: none;
+                          border: 1px solid #e1e1e1;
+                          height: 45px;
+                        "
+                        class="base-select__container"
+                      >
+                        <div
+                          id="base-select__value__representerar"
+                          class="base-select__value"
+                        ></div>
+                        <div class="base-select__arrow">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="240"
+                            height="240"
+                            viewBox="0 0 24 24"
+                            style="fill: rgba(0, 0, 0, 1)"
+                          >
+                            <path
+                              d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"
+                            ></path>
+                          </svg>
+                        </div>
+                      </div>
+                      <div
+                        style="display: none"
+                        id="representerar-select-item"
+                        class="base-select__dropdown-wrap"
+                      >
+                        <div
+                          id="representerar-select-dropdown"
+                          class="base-select__dropdown"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div style="justify-content: start" class="auth-form__row">
@@ -363,14 +365,11 @@
               </h2>
               <p class="auth-registration-page__description">
                 Vi kommer nu att granska din förfrågan sedan kommer våra
-                renoveringsföretag att kontakta dig för en offert.
+                webbyråer att kontakta dig för en offert.
               </p>
 
               <div class="auth-registration-page__form auth-form">
-                <a
-                  href="https://renoveringsoffert.se"
-                  class="auth-form__btn btn"
-                >
+                <a href="https://www.itofferter.se" class="auth-form__btn btn">
                   Tillbaka till startsidan
                 </a>
               </div>
@@ -381,21 +380,20 @@
 
       <footer class="the-footer container app__footer">
         <div class="the-footer__content container-inner">
-          <div to="[object Object]" class="logo the-footer__logo">
+          <div class="logo the-footer__logo">
             <img
-              style="height: 20px"
-              src="./img/Renoveringsoffert logo.svg"
+              style="height: 30px"
+              src="./img/Itofferter logga black.svg"
               alt="logo"
             />
           </div>
           <div class="the-footer__text text">
             <p>
-              Renoveringsofferter.se är en tjänst som specialiserar sig på att
-              underlätta för uppdragsgivare att hitta kvalificerade hantverkare.
-              Vi förstår att renoveringsprojekt kan vara överväldigande och
-              tidskrävande, så vi har skapat en plattform där du enkelt kan
-              komma i kontakt med erfarna hantverkare och jämföra deras
-              offerter.
+              Itofferter.se är en tjänst som specialiserar sig på att underlätta
+              för dig att hitta kvalificerade webbyråer. Vi förstår att
+              webbprojekt kan vara överväldigande och tidskrävande, så vi har
+              skapat en plattform där du enkelt kan komma i kontakt med erfarna
+              webbyråer och jämföra deras offerter.
             </p>
           </div>
         </div>
