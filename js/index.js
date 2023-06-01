@@ -25,12 +25,6 @@ let JagArOption = [
   "IT-förfågan",
 ];
 
-// let onskarOption = [
-//   "Snarast",
-//   "Inom 2 månader",
-//   "Inom 6 månader",
-//   "Inom 12 månader",
-// ];
 let onskarOption = [
   "Snarast",
 
