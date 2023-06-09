@@ -1961,3 +1961,7 @@ button.change-locale__btn {
     padding-right: 25px;
   }
 }
+
+#beskrivning:focus {
+  border-color: #ccc !important;
+}
