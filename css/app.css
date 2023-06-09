@@ -1962,12 +1962,13 @@ button.change-locale__btn {
   }
 }
 #beskrivning::placeholder {
-  color: #a5a5a5;
+  color: #fff;
 }
 
 #beskrivning {
   box-shadow: none;
   border: 2px solid #c5c5c5;
+  background-color: #ffffff;
 }
 #beskrivning:focus {
   border-color: #a5a5a5 !important;
