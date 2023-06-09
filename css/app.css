@@ -1961,7 +1961,14 @@ button.change-locale__btn {
     padding-right: 25px;
   }
 }
+#beskrivning::placeholder {
+  color: #a5a5a5;
+}
 
+#beskrivning {
+  box-shadow: none;
+  border: 2px solid #c5c5c5;
+}
 #beskrivning:focus {
-  border-color: #ccc !important;
+  border-color: #a5a5a5 !important;
 }
