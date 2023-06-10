@@ -1961,9 +1961,9 @@ button.change-locale__btn {
     padding-right: 25px;
   }
 }
-#beskrivning::placeholder {
-  color: #fff;
-}
+/* #beskrivning::placeholder {
+  color: #000000;
+} */
 
 #beskrivning {
   box-shadow: none;
